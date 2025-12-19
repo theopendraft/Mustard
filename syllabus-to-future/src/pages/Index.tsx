@@ -17,6 +17,9 @@ const Index = () => {
   const navigate = useNavigate();
   const heroRef = useRef(null);
   const scrollScaleRef = useRef(null);
+  const quoteRef = useRef(null);
+  const darkSectionRef = useRef(null);
+  const mentorRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
   const [cardsAnimated, setCardsAnimated] = useState(false);
 
@@ -233,7 +236,17 @@ const Index = () => {
       World.clear(engine.world, false);
       Engine.clear(engine);
     };
-  }, [cardsAnimated, phdX, phdY, phdRotate, phdOpacity, industryX, industryY, industryRotate, industryOpacity]);
+  }, [
+    cardsAnimated,
+    phdX,
+    phdY,
+    phdRotate,
+    phdOpacity,
+    industryX,
+    industryY,
+    industryRotate,
+    industryOpacity,
+  ]);
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -256,6 +269,52 @@ const Index = () => {
     [0.4, 0.5, 0.6],
     [0, 0, 1]
   );
+
+  // Scroll-linked animations for fallDown elements
+  const { scrollYProgress: quoteProgress } = useScroll({
+    target: quoteRef,
+    offset: ["start end", "end start"],
+  });
+
+  const { scrollYProgress: darkSectionProgress } = useScroll({
+    target: darkSectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const { scrollYProgress: mentorProgress } = useScroll({
+    target: mentorRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Tag animation (quote section)
+  const tagScrollY = useTransform(quoteProgress, [0, 0.5], [-200, 0]);
+  const tagScrollRotate = useTransform(quoteProgress, [0, 0.5], [-45, -6]);
+  const tagScrollScale = useTransform(quoteProgress, [0, 0.5], [0.5, 1]);
+  const tagScrollOpacity = useTransform(quoteProgress, [0, 0.5], [0, 1]);
+
+  // Dark section cards animation
+  const cardsScrollY = useTransform(darkSectionProgress, [0, 0.5], [-200, 0]);
+  const cardsScrollRotate = useTransform(
+    darkSectionProgress,
+    [0, 0.5],
+    [-45, -6]
+  );
+  const cardsScrollScale = useTransform(
+    darkSectionProgress,
+    [0, 0.5],
+    [0.5, 1]
+  );
+  const cardsScrollOpacity = useTransform(
+    darkSectionProgress,
+    [0, 0.5],
+    [0, 1]
+  );
+
+  // Mentor cards animation
+  const mentorScrollY = useTransform(mentorProgress, [0, 0.5], [-200, 0]);
+  const mentorScrollRotate = useTransform(mentorProgress, [0, 0.5], [-45, -6]);
+  const mentorScrollScale = useTransform(mentorProgress, [0, 0.5], [0.5, 1]);
+  const mentorScrollOpacity = useTransform(mentorProgress, [0, 0.5], [0, 1]);
 
   // Animation variants
   const containerVariants: Variants = {
@@ -469,6 +528,7 @@ const Index = () => {
 
       {/* Quote Section */}
       <motion.section
+        ref={quoteRef}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -478,7 +538,13 @@ const Index = () => {
       >
         <div className="max-w-5xl mx-auto ">
           {/* Slanted label with physics */}
-          <motion.div variants={fallDownVariants}
+          <motion.div
+            style={{
+              y: tagScrollY,
+              rotate: tagScrollRotate,
+              scale: tagScrollScale,
+              opacity: tagScrollOpacity,
+            }}
             className="inline-block bg-[#7b68ee] text-white px-8 py-3 rounded-md text-base md:text-xl font-normal mb-8 shadow-lg"
           >
             Students learn in silos
@@ -527,6 +593,7 @@ const Index = () => {
 
       {/* Dark Section with Cards */}
       <section
+        ref={darkSectionRef}
         className="py-24 px-5 relative overflow-hidden"
         style={{ backgroundColor: "#1c1c1c" }}
       >
@@ -562,7 +629,14 @@ const Index = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12"
           >
             {/* Green Card */}
-            <motion.div variants={fallDownVariants}>
+            <motion.div
+              style={{
+                y: cardsScrollY,
+                rotate: cardsScrollRotate,
+                scale: cardsScrollScale,
+                opacity: cardsScrollOpacity,
+              }}
+            >
               <Card
                 className="p-0 h-auto md:h-[420px] transition-all duration-500 ease-smooth hover:shadow-2xl rounded-[28px] overflow-hidden"
                 style={{ backgroundColor: "#37e2b4" }}
@@ -596,7 +670,14 @@ const Index = () => {
             </motion.div>
 
             {/* Purple Card - Context-First Learning */}
-            <motion.div variants={fallDownVariants}>
+            <motion.div
+              style={{
+                y: cardsScrollY,
+                rotate: cardsScrollRotate,
+                scale: cardsScrollScale,
+                opacity: cardsScrollOpacity,
+              }}
+            >
               <Card
                 className="p-0 h-auto md:h-[420px] transition-all duration-500 ease-smooth hover:shadow-2xl rounded-[28px] overflow-hidden"
                 style={{ backgroundColor: "#706cff" }}
@@ -630,7 +711,14 @@ const Index = () => {
             </motion.div>
 
             {/* Yellow Card - Creator Mindset */}
-            <motion.div variants={fallDownVariants}>
+            <motion.div
+              style={{
+                y: cardsScrollY,
+                rotate: cardsScrollRotate,
+                scale: cardsScrollScale,
+                opacity: cardsScrollOpacity,
+              }}
+            >
               <Card
                 className="p-0 h-auto md:h-[420px] transition-all duration-500 ease-smooth hover:shadow-2xl rounded-[28px] overflow-hidden"
                 style={{ backgroundColor: "#ffbf1f", color: "#1c1c1c" }}
@@ -819,6 +907,7 @@ const Index = () => {
 
       {/* Mentored by Masters */}
       <motion.section
+        ref={mentorRef}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -829,17 +918,24 @@ const Index = () => {
         <div className="max-w-6xl mx-auto text-center px-32">
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-5xl font-semibold mb-14 text-black"
+            className="text-3xl md:text-5xl font-semibold mb-14 text-black pd-14"
           >
             Mentored by Masters
           </motion.h2>
 
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4"
+            className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4 pt-20"
           >
             {/* PhD Scholars card */}
-            <motion.div variants={fallDownVariants}>
+            <motion.div
+              style={{
+                y: mentorScrollY,
+                rotate: mentorScrollRotate,
+                scale: mentorScrollScale,
+                opacity: mentorScrollOpacity,
+              }}
+            >
               <Card className="bg-black text-white rounded-md overflow-hidden shadow-3xl transition-all duration-500 hover:shadow-3xl hover:-translate-y-1">
                 <div className="px-10 pt-10 pb-8 flex flex-col h-full">
                   <h3 className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight">
@@ -869,7 +965,14 @@ const Index = () => {
             </motion.div>
 
             {/* Industry Leaders card */}
-            <motion.div variants={fallDownVariants}>
+            <motion.div
+              style={{
+                y: mentorScrollY,
+                rotate: mentorScrollRotate,
+                scale: mentorScrollScale,
+                opacity: mentorScrollOpacity,
+              }}
+            >
               <Card className="bg-black text-white rounded-md overflow-hidden shadow-3xl transition-all duration-500 hover:shadow-3xl hover:-translate-y-1">
                 <div className="px-10 pt-10 pb-8 flex flex-col h-full">
                   <h3 className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight">
