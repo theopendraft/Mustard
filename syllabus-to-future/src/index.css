@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Modern Gradient Brand Colors */
-    --background: 43 47% 97%;
+    --background: 34 38% 95%;
     --foreground: 0 0% 20%;
 
     --card: 0 0% 100%;
@@ -61,8 +61,16 @@ All colors MUST be HSL.
 
     /* Additional Design System Improvements */
     --primary-variant: 45 85% 60%;
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-variant)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--primary-variant))
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      hsl(var(--background)),
+      hsl(var(--secondary))
+    );
     --shadow-elegant: 0 10px 30px -10px hsl(var(--foreground) / 0.1);
     --shadow-glow: 0 0 40px hsl(var(--primary) / 0.15);
   }
@@ -125,7 +133,11 @@ All colors MUST be HSL.
   }
 
   .gradient-subtle {
-    background: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
+    background: linear-gradient(
+      180deg,
+      hsl(var(--background)),
+      hsl(var(--secondary))
+    );
   }
 
   .text-gradient {
@@ -136,13 +148,19 @@ All colors MUST be HSL.
   }
 
   .cta-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--purple)));
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--purple))
+    );
   }
 
   /* Grid Pattern for Futuristic Background */
   .bg-grid-pattern {
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px
+      ),
       linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
   }
@@ -167,7 +185,8 @@ All colors MUST be HSL.
 
   /* Enhanced Shadow Effects */
   .shadow-3xl {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px hsl(var(--primary) / 0.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+      0 0 0 1px hsl(var(--primary) / 0.05);
   }
 }
 
@@ -196,7 +215,6 @@ All colors MUST be HSL.
 }
 
 @keyframes pulse-glow {
-
   0%,
   100% {
     box-shadow: 0 0 20px rgba(123, 104, 238, 0.4);
@@ -208,7 +226,6 @@ All colors MUST be HSL.
 }
 
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0px);
@@ -233,7 +250,6 @@ All colors MUST be HSL.
 
 /* Advanced Animation Utilities */
 @layer utilities {
-
   /* Custom Easing */
   .ease-custom {
     transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
@@ -265,7 +281,7 @@ All colors MUST be HSL.
   }
 
   .underline-animate::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -2px;
     left: 0;
