@@ -23,7 +23,7 @@ const Navigation = () => {
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-orange-500">
+              <span className="text-2xl font-bold text-[#FFC00D]">
                 MUSTARD
               </span>
             </Link>
@@ -86,7 +86,7 @@ const Navigation = () => {
                 ))}
                 <div className="px-3 py-2">
                   <Button
-                    className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+                    className="w-full bg-[#FFC00D] hover:bg-[#FFC00D] text-white"
                     onClick={() => {
                       navigate("/contact");
                       setIsOpen(false);
