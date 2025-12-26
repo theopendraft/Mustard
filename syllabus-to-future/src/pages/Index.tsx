@@ -417,7 +417,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#FAF4EC]">
       {/* Hero Section Wrapper */}
-      <div className="relative" style={{ height: "200vh" }}>
+      <div className="relative" style={{ height: "150vh" }}>
         {/* Hero Heading Section */}
         <section
           ref={heroRef}
@@ -529,7 +529,7 @@ const Index = () => {
                 lineHeight: "100%",
                 letterSpacing: "-3%",
               }}
-              className="inline-block bg-[#7b68ee] text-black px-8 py-3 rounded-2xl text-base md:text-xl font-normal mb-8 shadow-lg text-center mx-auto"
+              className="inline-block bg-[#7b68ee] text-black px-8 py-3 rounded-2xl text-base md:text-xl font-normal mb-8 shadow-lg text-center mx-14"
             >
               Students learn in silos!
             </motion.div>
@@ -542,7 +542,7 @@ const Index = () => {
               style={{
                 fontFamily: "Inter",
                 fontWeight: 400,
-                fontSize: "72px",
+                fontSize: "64px",
                 lineHeight: "100%",
                 letterSpacing: "-0.03em",
               }}
@@ -710,15 +710,15 @@ const Index = () => {
                     style={{ backgroundColor: "#37e2b4" }}
                   >
                     <motion.div
-                      className="text-black h-full flex flex-col px-4 md:px-4 pt-4 md:pt-5 pb-6 md:pb-8"
-                      whileHover={{ y: -8 }}
-                      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                      className="text-black h-full flex flex-col "
+                      // whileHover={{ y: -8 }}
+                      // transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                     >
                       <h3
-                        className="text-3xl md:text-4xl font-normal leading-tight mb-6 md:mb-10"
+                        className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
                         style={{
                           fontWeight: 400,
-                          fontSize: "44px",
+                          fontSize: "48px",
                           lineHeight: "100%",
                           letterSpacing: "-3%",
                         }}
@@ -729,11 +729,12 @@ const Index = () => {
                       </h3>
                       <div className="mt-auto">
                         <div
-                          className="bg-[#FAF4EC] rounded-xl px-4 md:px-4 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end"
+                          className="bg-[#FAF4EC] px-4 md:px-4 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
                           style={{
                             clipPath:
                               "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                             paddingTop: "2rem",
+                            borderRadius: "10px",
                           }}
                         >
                           <p
@@ -747,15 +748,13 @@ const Index = () => {
                               textAlign: "right",
                             }}
                           >
-                            We don&apos;t force a foreign 
+                            We don&apos;t force a foreign
                             <br />
-                            curriculum on
-                            students. 
+                            curriculum on students.
                             <br />
-                            We show how existing lessons 
+                            We show how existing lessons
                             <br />
-                            evolve into
-                            advanced tech.
+                            evolve into advanced tech.
                           </p>
                         </div>
                       </div>
@@ -784,15 +783,15 @@ const Index = () => {
                     style={{ backgroundColor: "#7371FC" }}
                   >
                     <motion.div
-                      className="text-black h-full flex flex-col px-4 md:px-4 pt-4 md:pt-5 pb-6 md:pb-8"
-                      whileHover={{ y: -8 }}
-                      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                      className="text-black h-full flex flex-col "
+                      // whileHover={{ y: -8 }}
+                      // transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                     >
                       <h3
-                        className="text-3xl md:text-4xl font-normal leading-tight mb-6 md:mb-10"
+                        className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
                         style={{
                           fontWeight: 400,
-                          fontSize: "44px",
+                          fontSize: "48px",
                           lineHeight: "100%",
                           letterSpacing: "-3%",
                         }}
@@ -803,11 +802,12 @@ const Index = () => {
                       </h3>
                       <div className="mt-auto">
                         <div
-                          className="bg-[#FAF4EC] rounded-xl px-4 md:px-4 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end"
+                          className="bg-[#FAF4EC] px-4 md:px-4 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
                           style={{
                             clipPath:
                               "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                             paddingTop: "2rem",
+                            borderRadius: "10px",
                           }}
                         >
                           <p
@@ -821,10 +821,9 @@ const Index = () => {
                               textAlign: "right",
                             }}
                           >
-                            We don&apos;t teach &quot;Robotics&quot;; we 
+                            We don&apos;t teach &quot;Robotics&quot;; we
                             <br />
-                            teach
-                            how physics and code 
+                            teach how physics and code
                             <br />
                             merge to create motion.
                           </p>
@@ -855,15 +854,15 @@ const Index = () => {
                     style={{ backgroundColor: "#ffbf1f" }}
                   >
                     <motion.div
-                      className="text-black h-full flex flex-col px-4 md:px-4 pt-4 md:pt-5 pb-6 md:pb-8"
-                      whileHover={{ y: -8 }}
-                      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                      className="text-black h-full flex flex-col "
+                      // whileHover={{ y: -8 }}
+                      // transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                     >
                       <h3
-                        className="text-3xl md:text-4xl font-normal leading-tight mb-6 md:mb-10"
+                        className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
                         style={{
                           fontWeight: 400,
-                          fontSize: "44px",
+                          fontSize: "48px",
                           lineHeight: "100%",
                           letterSpacing: "-3%",
                         }}
@@ -874,30 +873,29 @@ const Index = () => {
                       </h3>
                       <div className="mt-auto">
                         <div
-                          className="bg-[#FAF4EC] rounded-xl px-4 md:px-4 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end"
+                          className="bg-[#FAF4EC] px-4 md:px-4 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
                           style={{
                             clipPath:
                               "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                             paddingTop: "2rem",
+                            borderRadius: "10px",
                           }}
                         >
                           <p
-                            className="opacity-90 text-sm md:text-base"
+                            className="opacity-90 text-sm md:text-base font-light"
                             style={{
                               fontFamily: "Inter",
                               fontWeight: 400,
                               fontSize: "20px",
                               lineHeight: "120%",
-                              letterSpacing: "-3%",
+                              letterSpacing: "-7%",
                               textAlign: "right",
                             }}
                           >
-                            We shift the focus from &quot;How do 
+                            We shift the focus from &quot;How do
                             <br />
-                            I use this
-                            device?&quot; to &quot;How do I <br />
-                            build this
-                            device?&quot;
+                            I use this device?&quot; to &quot;How do I <br />
+                            build this device?&quot;
                           </p>
                         </div>
                       </div>
@@ -912,28 +910,31 @@ const Index = () => {
 
       {/* Example Section with Stacking Cards */}
       <div className="relative bg-[#FAF4EC]">
-        <div style={{ height: "400vh" }}>
-          {/* Example Section Header - Sticky */}
-          <div className="sticky top-0 py-3 px-5 bg-[#FAF4EC] z-50">
-            <motion.h2
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={itemVariants}
-              className="text-3xl md:text-4xl font-semibold text-black pl-20 pb-3 md:px-10 pt-8"
-              style={{
-                fontWeight: 400,
-                fontSize: "56px",
-                lineHeight: "100%",
-                letterSpacing: "-3%",
-              }}
-            >
-              Let us show you an example
-            </motion.h2>
-          </div>
-
+        <div style={{ height: "280vh" }}>
           {/* Stacking Sections Container */}
           <div className="relative">
+            {/* Example Section Header - Sticky */}
+            <div
+              className="sticky py-3 px-5 bg-[#FAF4EC]"
+              style={{ top: "0px", zIndex: 0 }}
+            >
+              <motion.h2
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={itemVariants}
+                className="text-3xl md:text-4xl font-semibold text-black pl-20 pb-3 md:px-10 pt-8"
+                style={{
+                  fontWeight: 400,
+                  fontSize: "56px",
+                  lineHeight: "100%",
+                  letterSpacing: "-3%",
+                }}
+              >
+                Let us show you an example
+              </motion.h2>
+            </div>
+
             {/* School Lesson Section */}
             <motion.section
               initial="hidden"
@@ -1003,7 +1004,6 @@ const Index = () => {
                         dy/dx=0
                       </span>
                     </div>
-                  
                   </div>
                 </motion.div>
               </div>
@@ -1136,10 +1136,10 @@ const Index = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="py-24 px-5 bg-[#FAF4EC]"
+        className="py-24 bg-[#FAF4EC]"
         onViewportEnter={() => setCardsAnimated(true)}
       >
-        <div className="max-w-6xl mx-auto text-center px-5 pt-14">
+        <div className="max-w-auto mx-auto text-center pt-14">
           <motion.h2
             variants={itemVariants}
             className="text-3xl md:text-5xl font-semibold mb-14 text-black pd-14"
@@ -1155,20 +1155,26 @@ const Index = () => {
 
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center px-14"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center px-[145px]"
           >
             {/* PhD Scholars card */}
             <motion.div>
               <Card className="bg-black text-white rounded-[10px] overflow-hidden hover:-translate-y-1 w-full md:w-[481px] h-[466px] mx-auto">
-                <div className="px-10 pt-10 pb-8 flex flex-col h-full">
-                  <h3 className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight">
+                <div className=" flex flex-col h-full">
+                  <h3 className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight px-[45px] pt-[36px]"
+                  style={{
+                fontWeight: 400,
+                fontSize: "64px",
+                lineHeight: "100%",
+                letterSpacing: "-0.03em",
+              }}>
                     PhD
                     <br />
                     Scholars
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#7371FC] rounded-xl px-5 py-5  h-[215.8297576904297px] flex flex-col items-end justify-end"
+                      className="bg-[#7371FC] rounded-xl  h-[215.8297576904297px] flex flex-col items-end justify-end mx-[20px] mb-[29px] px-[26px] pb-[34px]"
                       style={{
                         clipPath: "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "3rem",
@@ -1179,7 +1185,7 @@ const Index = () => {
                         style={{
                           fontFamily: "Inter",
                           fontWeight: 400,
-                          fontSize: "20px",
+                          fontSize: "24px",
                           lineHeight: "100%",
                           letterSpacing: "-7%",
                           textAlign: "right",
@@ -1200,15 +1206,21 @@ const Index = () => {
             {/* Industry Leaders card */}
             <motion.div>
               <Card className="bg-black text-white rounded-[10px] overflow-hidden hover:-translate-y-1 w-full md:w-[481px] h-[466px] mx-auto">
-                <div className="px-10 pt-10 pb-8 flex flex-col h-full">
-                  <h3 className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight">
+                <div className=" flex flex-col h-full">
+                  <h3 className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight px-[45px] pt-[36px]"
+                  style={{
+                fontWeight: 400,
+                fontSize: "64px",
+                lineHeight: "100%",
+                letterSpacing: "-0.03em",
+              }}>
                     Industry
                     <br />
                     Leaders
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#43DDA4] rounded-xl px-5 py-5  h-[215.8297576904297px] flex flex-col items-end justify-end"
+                      className="bg-[#43DDA4] rounded-xl  h-[215.8297576904297px] flex flex-col items-end justify-end mx-[20px] mb-[29px] px-[26px] pb-[34px]"
                       style={{
                         clipPath: "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "3rem",
@@ -1219,7 +1231,7 @@ const Index = () => {
                         style={{
                           fontFamily: "Inter",
                           fontWeight: 400,
-                          fontSize: "20px",
+                          fontSize: "24px",
                           lineHeight: "100%",
                           letterSpacing: "-7%",
                           textAlign: "right",
