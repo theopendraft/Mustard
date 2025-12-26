@@ -95,11 +95,11 @@ const About = () => {
               className="text-2xl md:text-3xl text-black leading-relaxed max-w-auto mx-auto font-normal"
               style={{
                 fontWeight: 400,
-                fontSize: "48px",
+                fontSize: "56px",
                 lineHeight: "100%",
-                letterSpacing: "-3%",
+                letterSpacing: "-0.03em",
               }}
-            >
+            > 
               A future where every student leaves school
               <br />
               not just with a report card,
@@ -112,234 +112,206 @@ const About = () => {
         </div>
       </section>
 
-      {/* Cards Section - Scroll-Driven Stacking */}
+      {/* Cards Section - Auto Slide In */}
       <section
         ref={darkSectionRef}
-        className="relative"
+        className="py-32 px-5"
         style={{
           backgroundColor: "#FAF4EC",
-          paddingBottom: "200px",
         }}
       >
-        <div className="h-[300vh] md:h-[400vh]">
-          <div
-            className="sticky top-0 flex items-center justify-center px-5 md:px-0"
-            style={{ minHeight: "100vh" }}
+        <div className="max-w-auto mx-auto w-full px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-6xl md:text-7xl font-normal mb-20 text-center text-black"
+            style={{
+              fontWeight: 400,
+              fontSize: "96px",
+              lineHeight: "100%",
+              letterSpacing: "-3%",
+            }}
           >
-            <div className="max-w-auto mx-auto w-full px-6">
-              <h2
-                className="text-6xl md:text-7xl font-normal mb-20 text-center text-black"
-                style={{
-                  fontWeight: 400,
-                  fontSize: "96px",
-                  lineHeight: "100%",
-                  letterSpacing: "-3%",
-                }}
+            Our Core Values
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {/* Yellow Card - First to enter */}
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, delay: 0.2 }}
+              className="w-full"
+            >
+              <Card
+                className="p-0 h-[400px] md:h-[476px] rounded-[10px] overflow-hidden w-full border-0"
+                style={{ backgroundColor: "#ffbf1f" }}
               >
-                Our Core Values
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                {/* Green Card - Third to enter */}
                 <motion.div
-                  style={{
-                    y: useTransform(
-                      darkSectionProgress,
-                      [0.5, 0.75, 1],
-                      [400, 0, 0]
-                    ),
-                    opacity: useTransform(
-                      darkSectionProgress,
-                      [0.5, 0.65, 0.75],
-                      [0, 1, 1]
-                    ),
-                  }}
-                  className="w-full"
+                  className="text-black h-full flex flex-col "
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                 >
-                  <Card
-                    className="p-0 h-[400px] md:h-[476px] rounded-[10px] overflow-hidden w-full border-0"
-                    style={{ backgroundColor: "#37e2b4" }}
+                  <h3
+                    className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
+                    style={{
+                      fontWeight: 400,
+                      fontSize: "48px",
+                      lineHeight: "100%",
+                      letterSpacing: "-3%",
+                    }}
                   >
-                    <motion.div
-                      className="text-black h-full flex flex-col px-4 md:px-5 pt-4 md:pt-5 pb-6 md:pb-8"
-                      whileHover={{ y: -8 }}
-                      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                    Empowerment
+                  </h3>
+                  <div className="mt-auto">
+                    <div
+                      className="bg-[#FAF4EC] rounded-xl px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
+                      style={{
+                        clipPath:
+                          "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
+                        paddingTop: "2rem",
+                      }}
                     >
-                      <h3
-                        className="text-3xl md:text-4xl font-normal leading-tight mb-6 md:mb-10"
+                      <p
+                        className="opacity-90 text-sm md:text-base"
                         style={{
+                          fontFamily: "Inter",
                           fontWeight: 400,
-                          fontSize: "44px",
-                          lineHeight: "100%",
+                          fontSize: "24px",
+                          lineHeight: "120%",
                           letterSpacing: "-3%",
+                          textAlign: "right",
                         }}
                       >
-                        Relevance
-                      </h3>
-                      <div className="mt-auto">
-                        <div
-                          className="bg-[#FAF4EC] rounded-xl px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end"
-                          style={{
-                            clipPath:
-                              "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
-                            paddingTop: "2rem",
-                          }}
-                        >
-                          <p
-                            className="opacity-90 text-black text-sm md:text-base"
-                            style={{
-                              fontFamily: "Inter",
-                              fontWeight: 400,
-                              fontSize: "24px",
-                              lineHeight: "120%",
-                              letterSpacing: "-3%",
-                              textAlign: "right",
-                            }}
-                          >
-                            Every lesson must answer "Why does this matter?"
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </Card>
+                         Students should feel 
+                         <br />
+                         capable, not intimidated,
+                         <br />
+                         by complex tech.
+                      </p>
+                    </div>
+                  </div>
                 </motion.div>
+              </Card>
+            </motion.div>
 
-                {/* Purple Card - Second to enter */}
+            {/* Purple Card - Second to enter */}
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, delay: 0.6 }}
+              className="w-full"
+            >
+              <Card
+                className="p-0 h-[400px] md:h-[476px] rounded-[10px] overflow-hidden w-full border-0"
+                style={{ backgroundColor: "#7371FC" }}
+              >
                 <motion.div
-                  style={{
-                    y: useTransform(
-                      darkSectionProgress,
-                      [0.25, 0.5, 1],
-                      [400, 0, 0]
-                    ),
-                    opacity: useTransform(
-                      darkSectionProgress,
-                      [0.25, 0.4, 0.5],
-                      [0, 1, 1]
-                    ),
-                  }}
-                  className="w-full"
+                  className="text-black h-full flex flex-col leading-tight "
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                 >
-                  <Card
-                    className="p-0 h-[400px] md:h-[476px] rounded-[10px] overflow-hidden w-full border-0"
-                    style={{ backgroundColor: "#7371FC" }}
+                  <h3
+                    className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
+                    style={{
+                      fontWeight: 400,
+                      fontSize: "48px",
+                      lineHeight: "100%",
+                      letterSpacing: "-3%",
+                    }}
                   >
-                    <motion.div
-                      className="text-black h-full flex flex-col px-4 md:px-5 pt-4 md:pt-5 pb-6 md:pb-8"
-                      whileHover={{ y: -8 }}
-                      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                    Integration
+                  </h3>
+                  <div className="mt-auto">
+                    <div
+                      className="bg-[#FAF4EC] rounded-xl px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
+                      style={{
+                        clipPath:
+                          "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
+                        paddingTop: "2rem",
+                      }}
                     >
-                      <h3
-                        className="text-3xl md:text-4xl font-normal leading-tight mb-6 md:mb-10"
+                      <p
+                        className="opacity-90 text-sm md:text-base"
                         style={{
+                          fontFamily: "Inter",
                           fontWeight: 400,
-                          fontSize: "44px",
-                          lineHeight: "100%",
+                          fontSize: "24px",
+                          lineHeight: "120%",
                           letterSpacing: "-3%",
+                          textAlign: "right",
                         }}
                       >
-                        Integration
-                      </h3>
-                      <div className="mt-auto">
-                        <div
-                          className="bg-[#FAF4EC] rounded-xl px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end"
-                          style={{
-                            clipPath:
-                              "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
-                            paddingTop: "2rem",
-                          }}
-                        >
-                          <p
-                            className="opacity-90 text-sm md:text-base"
-                            style={{
-                              fontFamily: "Inter",
-                              fontWeight: 400,
-                              fontSize: "24px",
-                              lineHeight: "120%",
-                              letterSpacing: "-3%",
-                              textAlign: "right",
-                            }}
-                          >
-                            Technology is not a 
-                            <br />
-                            separate subject; it is the 
-                            <br />
-                            application of all subjects.
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </Card>
+                        Technology is not a 
+                        <br />
+                        separate subject; it is the 
+                        <br />
+                        application of all subjects.
+                      </p>
+                    </div>
+                  </div>
                 </motion.div>
+              </Card>
+            </motion.div>
 
-                {/* Yellow Card - First to enter */}
+            {/* Green Card - Third to enter */}
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, delay: 1.0 }}
+              className="w-full"
+            >
+              <Card
+                className="p-0 h-[400px] md:h-[476px] rounded-[10px] overflow-hidden w-full border-0"
+                style={{ backgroundColor: "#37e2b4" }}
+              >
                 <motion.div
-                  style={{
-                    y: useTransform(
-                      darkSectionProgress,
-                      [0, 0.25, 1],
-                      [400, 0, 0]
-                    ),
-                    opacity: useTransform(
-                      darkSectionProgress,
-                      [0, 0.15, 0.25],
-                      [0, 1, 1]
-                    ),
-                  }}
-                  className="w-full"
+                  className="text-black h-full flex flex-col"
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                 >
-                  <Card
-                    className="p-0 h-[400px] md:h-[476px] rounded-[10px] overflow-hidden w-full border-0"
-                    style={{ backgroundColor: "#ffbf1f" }}
+                  <h3
+                    className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
+                    style={{
+                      fontWeight: 400,
+                      fontSize: "48px",
+                      lineHeight: "100%",
+                      letterSpacing: "-3%",
+                    }}
                   >
-                    <motion.div
-                      className="text-black h-full flex flex-col px-4 md:px-5 pt-4 md:pt-5 pb-6 md:pb-8"
-                      whileHover={{ y: -8 }}
-                      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                    Relevance
+                  </h3>
+                  <div className="mt-auto">
+                    <div
+                      className="bg-[#FAF4EC] rounded-xl px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
+                      style={{
+                        clipPath:
+                          "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
+                        paddingTop: "2rem",
+                      }}
                     >
-                      <h3
-                        className="text-3xl md:text-4xl font-normal leading-tight mb-6 md:mb-10"
+                      <p
+                        className="opacity-90 text-black text-sm md:text-base"
                         style={{
+                          fontFamily: "Inter",
                           fontWeight: 400,
-                          fontSize: "44px",
-                          lineHeight: "100%",
+                          fontSize: "24px",
+                          lineHeight: "120%",
                           letterSpacing: "-3%",
+                          textAlign: "right",
                         }}
                       >
-                        Empowerment
-                      </h3>
-                      <div className="mt-auto">
-                        <div
-                          className="bg-[#FAF4EC] rounded-xl px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end"
-                          style={{
-                            clipPath:
-                              "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
-                            paddingTop: "2rem",
-                          }}
-                        >
-                          <p
-                            className="opacity-90 text-sm md:text-base"
-                            style={{
-                              fontFamily: "Inter",
-                              fontWeight: 400,
-                              fontSize: "24px",
-                              lineHeight: "120%",
-                              letterSpacing: "-3%",
-                              textAlign: "right",
-                            }}
-                          >
-                             Students should feel 
-                             <br />
-                             capable, not intimidated,
-                             <br />
-                             by complex tech.
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </Card>
+                        Every lesson must answer "Why does this matter?"
+                      </p>
+                    </div>
+                  </div>
                 </motion.div>
-              </div>
-            </div>
+              </Card>
+            </motion.div>
           </div>
         </div>
       </section>
