@@ -366,7 +366,7 @@ const Index = () => {
   };
 
   const slideUpVariants: Variants = {
-    hidden: { opacity: 0, y: 100 },
+    hidden: { y: 100 },
     visible: {
       opacity: 1,
       y: 0,
@@ -865,13 +865,18 @@ const Index = () => {
 
       {/* Example Section with Stacking Cards */}
       <div className="relative bg-[#FAF4EC] py-[80px]">
-        <div style={{ height: "280vh" }}>
+        <div style={{ height: "280vh", position: "relative" }}>
           {/* Stacking Sections Container */}
           <div className="relative">
             {/* Example Section Header - Sticky */}
             <div
               className="sticky py-3 px-5 bg-[#FAF4EC]"
-              style={{ top: "0px", zIndex: 0 }}
+              style={{
+                top: "0px",
+                zIndex: 0,
+                transform: "translateZ(0)",
+                backfaceVisibility: "hidden",
+              }}
             >
               <motion.h2
                 initial="hidden"
@@ -898,11 +903,16 @@ const Index = () => {
               viewport={{ once: true, margin: "-100px" }}
               variants={containerVariants}
               className="sticky px-5 bg-transparent flex items-center"
-              style={{ top: "120px", zIndex: 1 }}
+              style={{
+                top: "120px",
+                zIndex: 1,
+                willChange: "transform, opacity",
+                transform: "translateZ(0)",
+                backfaceVisibility: "hidden",
+              }}
             >
               <div className="max-w-screen mx-auto w-full ">
                 <motion.div
-                  variants={slideUpVariants}
                   className="bg-[#e6ded1] px-12 md:px-16 py-8 md:py-6 relative duration-500 max-w-full"
                   style={{
                     borderRadius: "24px",
@@ -978,11 +988,16 @@ const Index = () => {
               viewport={{ once: true, margin: "-100px" }}
               variants={containerVariants}
               className="sticky px-5 bg-transparent flex items-center"
-              style={{ top: "40px", zIndex: 2 }}
+              style={{
+                top: "40px",
+                zIndex: 2,
+                willChange: "transform, opacity",
+                transform: "translateZ(0)",
+                backfaceVisibility: "hidden",
+              }}
             >
               <div className="max-w-screen mx-auto w-full mt-20">
                 <motion.div
-                  variants={slideUpVariants}
                   className="bg-[#ffc700] px-12 md:px-16 py-8 md:py-6 relative duration-500 max-w-full"
                   style={{
                     borderRadius: "24px",
@@ -1047,12 +1062,17 @@ const Index = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={containerVariants}
-              className="sticky px-5 bg-transparent flex items-center "
-              style={{ top: "120px", zIndex: 3 }}
+              className="sticky px-5 bg-transparent flex items-center"
+              style={{
+                top: "120px",
+                zIndex: 3,
+                willChange: "transform, opacity",
+                transform: "translateZ(0)",
+                backfaceVisibility: "hidden",
+              }}
             >
               <div className="max-w-screen mx-auto w-full mt-20">
                 <motion.div
-                  variants={slideUpVariants}
                   className="bg-[#2bdba0] px-12 md:px-16 py-8 md:py-6 relative duration-500 max-w-full"
                   style={{
                     borderRadius: "24px",
