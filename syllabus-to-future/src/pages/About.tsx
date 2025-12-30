@@ -44,7 +44,7 @@ const About = () => {
                 fontWeight: 400,
                 fontSize: "110px",
                 lineHeight: "90%",
-                letterSpacing: "-3%",
+                letterSpacing: "-0.03em",
               }}
             >
               About Us
@@ -137,7 +137,7 @@ const About = () => {
               fontWeight: 400,
               fontSize: "96px",
               lineHeight: "100%",
-              letterSpacing: "-3%",
+              letterSpacing: "-0.03em",
             }}
           >
             Our Core Values
@@ -168,30 +168,32 @@ const About = () => {
                       fontWeight: 400,
                       fontSize: "48px",
                       lineHeight: "100%",
-                      letterSpacing: "-3%",
+                      letterSpacing: "-0.03em",
                     }}
                   >
                     Relevance
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#FAF4EC] rounded-xl px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
+                      className="bg-[#FAF4EC] px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px] "
                       style={{
                         clipPath:
                           "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "2rem",
+                        borderRadius: "10px",
                       }}
                     >
                       <p
                         className="opacity-90 text-black text-sm md:text-base"
                         style={{
-                          fontFamily: "Inter",
-                          fontWeight: 400,
-                          fontSize: "24px",
-                          lineHeight: "120%",
-                          letterSpacing: "-3%",
-                          textAlign: "right",
-                        }}
+                              
+                              fontFamily: "Inter",
+                              fontWeight: 400,
+                              fontSize: "20px",
+                              lineHeight: "120%",
+                              letterSpacing: "-0.03em",
+                              textAlign: "right",
+                            }}
                       >
                         Every lesson must answer "Why does this matter?"
                       </p>
@@ -228,30 +230,32 @@ const About = () => {
                       fontWeight: 400,
                       fontSize: "48px",
                       lineHeight: "100%",
-                      letterSpacing: "-3%",
+                      letterSpacing: "-0.03em",
                     }}
                   >
                     Integration
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#FAF4EC] rounded-xl px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
+                      className="bg-[#FAF4EC] px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
                       style={{
                         clipPath:
                           "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "2rem",
+                        borderRadius: "10px",
                       }}
                     >
                       <p
                         className="opacity-90 text-sm md:text-base"
                         style={{
-                          fontFamily: "Inter",
-                          fontWeight: 400,
-                          fontSize: "24px",
-                          lineHeight: "120%",
-                          letterSpacing: "-3%",
-                          textAlign: "right",
-                        }}
+                              
+                              fontFamily: "Inter",
+                              fontWeight: 400,
+                              fontSize: "20px",
+                              lineHeight: "120%",
+                              letterSpacing: "-0.03em",
+                              textAlign: "right",
+                            }}
                       >
                         Technology is not a 
                         <br />
@@ -296,23 +300,25 @@ const About = () => {
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#FAF4EC] rounded-xl px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
+                      className="bg-[#FAF4EC] px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
                       style={{
                         clipPath:
                           "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "2rem",
+                        borderRadius: "10px",
                       }}
                     >
                       <p
                         className="opacity-90 text-sm md:text-base"
                         style={{
-                          fontFamily: "Inter",
-                          fontWeight: 400,
-                          fontSize: "24px",
-                          lineHeight: "120%",
-                          letterSpacing: "-3%",
-                          textAlign: "right",
-                        }}
+                              
+                              fontFamily: "Inter",
+                              fontWeight: 400,
+                              fontSize: "20px",
+                              lineHeight: "120%",
+                              letterSpacing: "-0.03em",
+                              textAlign: "right",
+                            }}
                       >
                          Students should feel 
                          <br />
@@ -350,7 +356,7 @@ const About = () => {
                       fontWeight: 400,
                       fontSize: "24px",
                       lineHeight: "100%",
-                      letterSpacing: "-3%",
+                      letterSpacing: "-0.03em",
                     }}>
                     {school.name}
                   </h3>
@@ -360,7 +366,7 @@ const About = () => {
                       fontWeight: 400,
                       fontSize: "20px",
                       lineHeight: "100%",
-                      letterSpacing: "-3%",
+                      letterSpacing: "-0.03em",
                     }}>
                     {school.location}
                   </p>

@@ -12,6 +12,7 @@ import {
 } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import Matter from "matter-js";
+import ScrollRevealParagraph from "@/components/ScrollRevealParagraph";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -254,7 +255,7 @@ const Index = () => {
   });
 
   const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
   // Scroll-linked scaling animation
   const { scrollYProgress: scaleProgress } = useScroll({
@@ -421,7 +422,7 @@ const Index = () => {
         {/* Hero Heading Section */}
         <section
           ref={heroRef}
-          className="sticky top-0 text-center px-5 bg-[#FAF4EC] overflow-hidden h-screen flex items-center justify-center"
+          className="sticky top-0 text-center pb-8 bg-[#FAF4EC] overflow-hidden h-screen flex items-center justify-center"
           style={{ zIndex: 1 }}
         >
           <motion.div className="relative z-10">
@@ -431,7 +432,6 @@ const Index = () => {
               transition={{ duration: 1, ease: [0.23, 1, 0.32, 1] }}
               className="text-black"
               style={{
-                
                 fontFamily: "'Haffer', sans-serif",
                 fontWeight: 400,
                 fontSize: "110px",
@@ -597,12 +597,22 @@ const Index = () => {
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
           className="max-w-6xl mx-auto relative z-10 align-middle h-full flex items-center"
+          style={{
+            fontFamily: "'Haffer', sans-serif",
+            fontWeight: 400,
+            fontSize: "64px",
+            lineHeight: "100%",
+            letterSpacing: "-0.03em",
+          }}
         >
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ staggerChildren: 0.015, delayChildren: 0.1 }}
+          <ScrollRevealParagraph
+            lines={[
+              "We transform students from",
+              "passive consumers of technology",
+              "into active creators by connecting",
+              "the subjects they learn today with",
+              "the innovations of tomorrow.",
+            ]}
             className="text-2xl md:text-auto font-normal text-white text-right ml-auto"
             style={{
               fontFamily: "'Haffer', sans-serif",
@@ -611,69 +621,7 @@ const Index = () => {
               lineHeight: "100%",
               letterSpacing: "-0.03em",
             }}
-          >
-            <div className="mb-2">
-              {`We transform students from`.split("").map((char, index) => (
-                <motion.span
-                  key={`dark-section-line1-${index}`}
-                  variants={charVariants}
-                  className="inline-block"
-                >
-                  {char === " " ? "\u00A0" : char}
-                </motion.span>
-              ))}
-            </div>
-            <div className="mb-2">
-              {`passive consumers of technology`
-                .split("")
-                .map((char, index) => (
-                  <motion.span
-                    key={`dark-section-line2-${index}`}
-                    variants={charVariants}
-                    className="inline-block"
-                  >
-                    {char === " " ? "\u00A0" : char}
-                  </motion.span>
-                ))}
-            </div>
-            <div className="mb-2">
-              {`into active creators by connecting`
-                .split("")
-                .map((char, index) => (
-                  <motion.span
-                    key={`dark-section-line3-${index}`}
-                    variants={charVariants}
-                    className="inline-block"
-                  >
-                    {char === " " ? "\u00A0" : char}
-                  </motion.span>
-                ))}
-            </div>
-            <div className="mb-2">
-              {`the subjects they learn today with`
-                .split("")
-                .map((char, index) => (
-                  <motion.span
-                    key={`dark-section-line4-${index}`}
-                    variants={charVariants}
-                    className="inline-block"
-                  >
-                    {char === " " ? "\u00A0" : char}
-                  </motion.span>
-                ))}
-            </div>
-            <div>
-              {`the innovations of tomorrow.`.split("").map((char, index) => (
-                <motion.span
-                  key={`dark-section-line5-${index}`}
-                  variants={charVariants}
-                  className="inline-block"
-                >
-                  {char === " " ? "\u00A0" : char}
-                </motion.span>
-              ))}
-            </div>
-          </motion.div>
+          />
         </motion.div>
       </section>
 
@@ -745,7 +693,6 @@ const Index = () => {
                           <p
                             className="opacity-90 text-black text-sm md:text-base"
                             style={{
-                              
                               fontFamily: "Inter",
                               fontWeight: 400,
                               fontSize: "20px",
@@ -957,7 +904,10 @@ const Index = () => {
                 <motion.div
                   variants={slideUpVariants}
                   className="bg-[#e6ded1] px-12 md:px-16 py-8 md:py-6 relative duration-500 max-w-full"
-                  style={{ borderRadius: "24px",  height: "calc(100vh - 120px)" }}
+                  style={{
+                    borderRadius: "24px",
+                    height: "calc(100vh - 120px)",
+                  }}
                 >
                   <div
                     className=" bg-white text-black px-8 py-3 rounded-md  mb-12 inline-block items-center justify-cente"
@@ -987,7 +937,7 @@ const Index = () => {
                       <br />
                       maximum of a curve
                     </h3>
-                    <div className="absolute top-8 right-8 md:top-2 md:right-12 text-7xl md:text-8xl font-normal text-white/20">
+                    <div className="absolute top-8 right-8 md:top-4 md:right-8 text-7xl md:text-8xl font-normal text-white/20">
                       01
                     </div>
                     <div className="flex flex-col items-end gap-1 absolute top-8 right-8 md:top-64 md:right-36">
@@ -1028,13 +978,16 @@ const Index = () => {
               viewport={{ once: true, margin: "-100px" }}
               variants={containerVariants}
               className="sticky px-5 bg-transparent flex items-center"
-              style={{ top: "40px", zIndex: 2, }}
+              style={{ top: "40px", zIndex: 2 }}
             >
               <div className="max-w-screen mx-auto w-full mt-20">
                 <motion.div
                   variants={slideUpVariants}
                   className="bg-[#ffc700] px-12 md:px-16 py-8 md:py-6 relative duration-500 max-w-full"
-                  style={{ borderRadius: "24px",  height: "calc(100vh - 120px)" }}
+                  style={{
+                    borderRadius: "24px",
+                    height: "calc(100vh - 120px)",
+                  }}
                 >
                   <div
                     className=" bg-white text-black px-8 py-3 rounded-md  mb-12 inline-block items-center justify-center"
@@ -1080,7 +1033,7 @@ const Index = () => {
                       <br />
                       that direction.
                     </h3>
-                    <div className="absolute top-8 right-8 md:top-2 md:right-12 text-7xl md:text-8xl font-normal text-white/20">
+                    <div className="absolute top-8 right-8 md:top-4 md:right-8 text-7xl md:text-8xl font-normal text-white/20">
                       02
                     </div>
                   </div>
@@ -1095,13 +1048,16 @@ const Index = () => {
               viewport={{ once: true, margin: "-100px" }}
               variants={containerVariants}
               className="sticky px-5 bg-transparent flex items-center "
-              style={{ top: "120px", zIndex: 3, }}
+              style={{ top: "120px", zIndex: 3 }}
             >
               <div className="max-w-screen mx-auto w-full mt-20">
                 <motion.div
                   variants={slideUpVariants}
                   className="bg-[#2bdba0] px-12 md:px-16 py-8 md:py-6 relative duration-500 max-w-full"
-                  style={{ borderRadius: "24px",  height: "calc(100vh - 120px)" }}
+                  style={{
+                    borderRadius: "24px",
+                    height: "calc(100vh - 120px)",
+                  }}
                 >
                   <div
                     className="inline-block bg-white text-black px-8 py-3 rounded-md shadow-sm mb-12 items-center justify-center"
@@ -1131,7 +1087,7 @@ const Index = () => {
                       <br />
                       minimize steering error.
                     </h3>
-                    <div className="absolute top-8 right-8 md:top-2 md:right-12 text-7xl md:text-8xl font-normal text-white/20">
+                    <div className="absolute top-8 right-8 md:top-4 md:right-8 text-7xl md:text-8xl font-normal text-white/20">
                       03
                     </div>
                   </div>
@@ -1173,38 +1129,39 @@ const Index = () => {
           >
             {/* PhD Scholars card */}
             <motion.div>
-              <Card className="bg-black text-white rounded-[10px] overflow-hidden hover:-translate-y-1 w-full md:w-[332px] h-[466px] mx-auto">
-                <div className=" flex flex-col h-full">
+              <Card className="bg-black text-white p-0 h-[400px] md:h-[436px] w-[332px] rounded-[10px] overflow-hidden border-0">
+                <div className=" h-full flex flex-col">
                   <h3
-                    className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight px-[45px] pt-[36px]"
+                    className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10 text-left"
                     style={{
                       fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
-                      fontSize: "64px",
+                      fontSize: "48px",
                       lineHeight: "100%",
                       letterSpacing: "-0.03em",
                     }}
                   >
-                    PhD 
+                    PhD
                     <br />
                     Scholars
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#7371FC] rounded-xl  h-[215.8297576904297px] flex flex-col items-end justify-end mx-[20px] mb-[29px] px-[20px] pb-[34px]"
+                      className="bg-[#7371FC] px-4 md:px-4 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
                       style={{
                         clipPath: "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "3rem",
+                        borderRadius: "10px",
                       }}
                     >
                       <p
-                        className="opacity-90 text-black"
+                        className="opacity-90 text-black text-sm md:text-base"
                         style={{
                           fontFamily: "Inter",
                           fontWeight: 400,
                           fontSize: "20px",
-                          lineHeight: "100%",
-                          letterSpacing: "-0.07em",
+                          lineHeight: "120%",
+                          letterSpacing: "-0.03em",
                           textAlign: "right",
                         }}
                       >
@@ -1212,7 +1169,7 @@ const Index = () => {
                         <br />
                         by doctorate holders
                         <br />
-                         who ensure theoretical
+                        who ensure theoretical
                         <br />
                         depth and accuracy.
                       </p>
@@ -1224,14 +1181,14 @@ const Index = () => {
 
             {/* Industry Leaders card */}
             <motion.div>
-              <Card className="bg-black text-white rounded-[10px] overflow-hidden hover:-translate-y-1 w-full md:w-[332px] h-[466px] mx-auto">
+              <Card className="bg-black text-white p-0 h-[400px] md:h-[436px] w-[332px] rounded-[10px] overflow-hidden border-0">
                 <div className=" flex flex-col h-full">
                   <h3
-                    className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight px-[45px] pt-[36px]"
+                    className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10 text-left"
                     style={{
                       fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
-                      fontSize: "64px",
+                      fontSize: "48px",
                       lineHeight: "100%",
                       letterSpacing: "-0.03em",
                     }}
@@ -1242,20 +1199,21 @@ const Index = () => {
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#43DDA4] rounded-xl  h-[215.8297576904297px] flex flex-col items-end justify-end mx-[20px] mb-[29px] px-[20px] pb-[34px]"
+                      className="bg-[#43DDA4] px-4 md:px-4 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
                       style={{
                         clipPath: "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "3rem",
+                        borderRadius: "10px",
                       }}
                     >
                       <p
-                        className="opacity-90 text-black"
+                        className="opacity-90 text-black text-sm md:text-base"
                         style={{
                           fontFamily: "Inter",
                           fontWeight: 400,
                           fontSize: "20px",
-                          lineHeight: "100%",
-                          letterSpacing: "-0.07em",
+                          lineHeight: "120%",
+                          letterSpacing: "-0.03em",
                           textAlign: "right",
                         }}
                       >
@@ -1329,10 +1287,10 @@ const Index = () => {
               transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
             >
               <Button
-                className="bg-[#7371FC] text-white px-6 py-3 text-xl font-normal rounded-md w-[300px] h-[64px]" 
+                className="bg-[#7371FC] text-white px-6 py-3 text-xl font-light rounded-md w-[300px] h-[64px]"
                 style={{
                   fontFamily: "'Haffer', sans-serif",
-                  fontWeight: 500,
+                  fontWeight: 400,
                   fontSize: "32px",
                   lineHeight: "100%",
                   letterSpacing: "-0.03em",
