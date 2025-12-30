@@ -42,7 +42,7 @@ const Method = () => {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative text-center py-20 px-5 bg-[#FAF4EC] overflow-hidden"
+        className="relative text-center py-32 bg-[#FAF4EC] overflow-hidden h-screen flex items-center justify-center"
       >
         <motion.div
           style={{ y: heroY, opacity: heroOpacity }}
@@ -52,7 +52,13 @@ const Method = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.23, 1, 0.32, 1] }}
-            className="text-5xl md:text-7xl lg:text-8xl font-normal mb-12 text-black leading-tight"
+            className="text-7xl md:text-8xl font-normal mb-16 text-black tracking-tight"
+            style={{
+              fontWeight: 400,
+              fontSize: "110px",
+              lineHeight: "90%",
+              letterSpacing: "-3%",
+            }}
           >
             The Evolutionary
             <br />
@@ -63,102 +69,137 @@ const Method = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
-            className="text-xl md:text-2xl lg:text-3xl text-black mb-10 max-w-5xl mx-auto leading-relaxed font-medium"
+            className="text-2xl md:text-3xl text-black leading-relaxed max-w-auto font-medium px-[0px]"
+            style={{
+              fontWeight: 400,
+              fontSize: "32px",
+              lineHeight: "100%",
+              letterSpacing: "-3%",
+            }}
           >
-            We believe that advanced technology is simply basic principles scaled up.
+            We believe that advanced technology is simply basic principles
+            scaled up.
             <br />
-            Our methodology takes students on a journey from the textbooks to technology
+            Our methodology takes students on a journey from the textbooks to
+            <br />
+            technology
           </motion.p>
         </motion.div>
       </section>
 
       {/* Evolutionary Framework Section */}
-      <section className="py-16 px-5 bg-[#fbf1e5]">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
-          className="max-w-4xl mx-auto"
-        >
+      <section className="relative bg-[#fbf1e5]" style={{ height: "400vh" }}>
+        <div className="max-w-4xl mx-auto">
           {/* The Root (Concept) */}
-          <motion.div variants={itemVariants} className="mb-8">
-            <div className="bg-[#e8e0d4] rounded-md p-12 relative min-h-[350px] flex flex-col max-w-full">
-              <div className="bg-white rounded-md px-6 py-2 inline-block mb-4 w-fit">
-                <span className="text-black font-semibold text-sm">
-                  The Root (Concept)
-                </span>
-              </div>
+          <div className="sticky top-0 py-16 px-5" style={{ zIndex: 1 }}>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={itemVariants}
+            >
+              <div className="bg-[#e8e0d4] rounded-md p-12 relative min-h-[350px] flex flex-col max-w-full">
+                <div className="bg-white rounded-md px-6 py-2 inline-block mb-4 w-fit">
+                  <span className="text-black font-semibold text-sm">
+                    The Root (Concept)
+                  </span>
+                </div>
 
-              <p className="text-black text-2xl md:text-3xl leading-relaxed font-normal mt-auto text-right">
-                Matrices 
-                <br/>
-                Students solve standard row-and-column addition problems from their Class 12 textbook.
-              </p>
-            </div>
-          </motion.div>
+                <p className="text-black text-2xl md:text-3xl leading-relaxed font-normal mt-auto text-right">
+                  Matrices
+                  <br />
+                  Students solve standard row-and-column addition problems from
+                  their Class 12 textbook.
+                </p>
+              </div>
+            </motion.div>
+          </div>
 
           {/* The Stem (Context) */}
-          <motion.div variants={itemVariants} className="mb-8 relative">
-            <div
-              className="rounded-md p-12 text-black relative min-h-[350px] flex flex-col max-w-full"
-              style={{ backgroundColor: "#ffbf1f" }}
+          <div className="sticky top-0 py-16 px-5" style={{ zIndex: 2 }}>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={itemVariants}
             >
-              <div className="bg-white rounded-md px-6 py-2 inline-block mb-4 w-fit">
-                <span className="text-black font-semibold text-sm">
-                  The Stem (Context)
-                </span>
+              <div
+                className="rounded-md p-12 text-black relative min-h-[350px] flex flex-col max-w-full"
+                style={{ backgroundColor: "#ffbf1f" }}
+              >
+                <div className="bg-white rounded-md px-6 py-2 inline-block mb-4 w-fit">
+                  <span className="text-black font-semibold text-sm">
+                    The Stem (Context)
+                  </span>
+                </div>
+                <p className="text-black text-2xl md:text-3xl leading-relaxed font-normal mt-auto text-right">
+                  A digital image is just a giant matrix. To a computer, a
+                  photograph is literally a grid of numbers representing light
+                  intensity.
+                </p>
               </div>
-              <p className="text-black text-2xl md:text-3xl leading-relaxed font-normal mt-auto text-right">
-                A digital image is just a giant matrix. To a computer, a photograph is literally a grid of numbers representing light intensity.
-              </p>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
 
           {/* The Leaf (Experimentation) */}
-          <motion.div variants={itemVariants} className="mb-8">
-            <div
-              className="rounded-md p-12 text-white relative min-h-[350px] flex flex-col max-w-full"
-              style={{ backgroundColor: "#706cff" }}
+          <div className="sticky top-0 py-16 px-5" style={{ zIndex: 3 }}>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={itemVariants}
             >
-              <div className="bg-white rounded-md px-6 py-2 inline-block mb-4 w-fit">
-                <span className="text-black font-semibold text-sm">
-                  The Leaf (Experimentation)
-                </span>
+              <div
+                className="rounded-md p-12 text-white relative min-h-[350px] flex flex-col max-w-full"
+                style={{ backgroundColor: "#706cff" }}
+              >
+                <div className="bg-white rounded-md px-6 py-2 inline-block mb-4 w-fit">
+                  <span className="text-black font-semibold text-sm">
+                    The Leaf (Experimentation)
+                  </span>
+                </div>
+                <p className="text-white text-2xl md:text-3xl leading-relaxed font-normal mt-auto text-right">
+                  Math as a Filter.
+                  <br />
+                  Students add +50 to every number in the grid. Instantly, a
+                  dark image becomes bright
+                </p>
               </div>
-              <p className="text-white text-2xl md:text-3xl leading-relaxed font-normal mt-auto text-right">
-                Math as a Filter. 
-                <br/>
-                Students add +50 to every number in the grid. Instantly, a dark image becomes bright
-              </p>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
 
           {/* The Flower (Innovation) */}
-          <motion.div variants={itemVariants} className="mb-8">
-            <div
-              className="rounded-md p-12 text-black relative min-h-[350px] flex flex-col max-w-full"
-              style={{ backgroundColor: "#37e2b4" }}
+          <div className="sticky top-0 py-16 px-5" style={{ zIndex: 4 }}>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={itemVariants}
             >
-              <div className="bg-white rounded-md px-6 py-2 inline-block mb-4 w-fit">
-                <span className="text-black font-semibold text-sm">
-                  The Flower (Innovation)
-                </span>
+              <div
+                className="rounded-md p-12 text-black relative min-h-[350px] flex flex-col max-w-full"
+                style={{ backgroundColor: "#37e2b4" }}
+              >
+                <div className="bg-white rounded-md px-6 py-2 inline-block mb-4 w-fit">
+                  <span className="text-black font-semibold text-sm">
+                    The Flower (Innovation)
+                  </span>
+                </div>
+                <p className="text-black text-2xl md:text-3xl leading-relaxed font-normal mt-auto text-right">
+                  Building the Tool.
+                  <br />
+                  Students code an algorithm to detect where numbers change
+                  suddenly. The result? A Document Scanner that auto-detects and
+                  crops page edges.
+                </p>
               </div>
-              <p className="text-black text-2xl md:text-3xl leading-relaxed font-normal mt-auto text-right">
-                Building the Tool. 
-                <br />
-                Students code an algorithm to detect where numbers change suddenly. The result? A Document Scanner that auto-detects and crops page edges.
-              </p>
-            </div>
-          </motion.div>
-        </motion.div>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
       {/* From Textbooks to Technology Section */}
-      <section
-        className="py-24 px-5 relative overflow-hidden bg-[#FAF4EC]"
-      >
+      <section className="py-24 px-5 relative overflow-hidden bg-[#FAF4EC]">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -170,8 +211,8 @@ const Method = () => {
             variants={itemVariants}
             className="text-5xl md:text-6xl lg:text-7xl font-normal text-black mb-16 text-center leading-tight"
           >
-            From Textbooks to 
-            <br/>
+            From Textbooks to
+            <br />
             Technology
           </motion.h2>
 
@@ -198,23 +239,24 @@ const Method = () => {
           >
             {/* Basic Arithmetic & Matrices */}
             <motion.div variants={itemVariants}>
-              <div
-                className="relative h-[450px] md:h-[500px] transition-all duration-500 rounded-xl overflow-hidden bg-white p-8"
-              >
-                <span className="absolute top-8 right-8 text-6xl font-normal text-gray-300 opacity-50">01</span>
+              <div className="relative h-[450px] md:h-[500px] transition-all duration-500 rounded-xl overflow-hidden bg-white p-8">
+                <span className="absolute top-8 right-8 text-6xl font-normal text-gray-300 opacity-50">
+                  01
+                </span>
                 <h3 className="text-3xl md:text-4xl font-normal leading-tight text-black max-w-[70%]">
                   Basic Arithmetic & Matrices
                 </h3>
-                <div 
+                <div
                   className="absolute bottom-4 right-4 p-10 w-[88%] h-[48%] flex items-center justify-center shadow-lg"
-                  style={{ 
+                  style={{
                     backgroundColor: "#e8e0d4",
                     clipPath: "polygon( 0% 30%, 100% 0%, 100% 100%, 0% 100%)",
-                    borderRadius: "12px"
+                    borderRadius: "12px",
                   }}
                 >
                   <p className="text-black text-lg md:text-xl leading-relaxed font-normal text-center pt-8">
-                    Learning how to arrange numbers in rows and columns and perform operations.
+                    Learning how to arrange numbers in rows and columns and
+                    perform operations.
                   </p>
                 </div>
               </div>
@@ -222,23 +264,24 @@ const Method = () => {
 
             {/* Linear Algebra */}
             <motion.div variants={itemVariants}>
-              <div
-                className="relative h-[450px] md:h-[500px] transition-all duration-500 rounded-xl overflow-hidden bg-white p-8"
-              >
-                <span className="absolute top-8 right-8 text-6xl font-normal text-gray-300 opacity-50">02</span>
+              <div className="relative h-[450px] md:h-[500px] transition-all duration-500 rounded-xl overflow-hidden bg-white p-8">
+                <span className="absolute top-8 right-8 text-6xl font-normal text-gray-300 opacity-50">
+                  02
+                </span>
                 <h3 className="text-3xl md:text-4xl font-normal leading-tight text-black max-w-[70%]">
                   Linear Algebra
                 </h3>
-                <div 
+                <div
                   className="absolute bottom-4 right-4 p-10 w-[88%] h-[58%] flex items-center justify-center shadow-lg"
-                  style={{ 
+                  style={{
                     backgroundColor: "#ffbf1f",
                     clipPath: "polygon( 0% 30%, 100% 0%, 100% 100%, 0% 100%)",
-                    borderRadius: "12px"
+                    borderRadius: "12px",
                   }}
                 >
                   <p className="text-black text-lg md:text-xl leading-relaxed font-normal text-center pt-8">
-                    Understanding how massive grids of numbers (tensors) can represent complex data like images or language.
+                    Understanding how massive grids of numbers (tensors) can
+                    represent complex data like images or language.
                   </p>
                 </div>
               </div>
@@ -246,24 +289,24 @@ const Method = () => {
 
             {/* Neural Networks & AI */}
             <motion.div variants={itemVariants}>
-              <div
-                className="relative h-[450px] md:h-[500px] transition-all duration-500 rounded-xl overflow-hidden bg-white p-8"
-              >
-                <span className="absolute top-8 right-8 text-6xl font-normal text-gray-300 opacity-50">03</span>
+              <div className="relative h-[450px] md:h-[500px] transition-all duration-500 rounded-xl overflow-hidden bg-white p-8">
+                <span className="absolute top-8 right-8 text-6xl font-normal text-gray-300 opacity-50">
+                  03
+                </span>
                 <h3 className="text-3xl md:text-4xl font-normal leading-tight text-black max-w-[70%]">
                   Neural Networks & AI
                 </h3>
-                <div 
+                <div
                   className="absolute bottom-4 right-4 p-10 w-[88%] h-[58%] flex items-center justify-center shadow-lg"
-                  style={{ 
+                  style={{
                     borderRadius: "12px",
                     backgroundColor: "#37e2b4",
-                    clipPath: "polygon( 0% 30%, 100% 0%, 100% 100%, 0% 100%)"
-                    
+                    clipPath: "polygon( 0% 30%, 100% 0%, 100% 100%, 0% 100%)",
                   }}
                 >
                   <p className="text-black text-lg md:text-xl leading-relaxed font-normal text-center pt-8">
-                    Building AI models where matrix multiplication determines how a computer "thinks" and learns.
+                    Building AI models where matrix multiplication determines
+                    how a computer "thinks" and learns.
                   </p>
                 </div>
               </div>

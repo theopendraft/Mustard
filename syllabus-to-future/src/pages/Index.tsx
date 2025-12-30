@@ -421,7 +421,7 @@ const Index = () => {
         {/* Hero Heading Section */}
         <section
           ref={heroRef}
-          className="sticky top-0 text-center pt-28 px-5 bg-[#FAF4EC] overflow-hidden h-auto flex items-center justify-center"
+          className="sticky top-0 text-center px-5 bg-[#FAF4EC] overflow-hidden h-screen flex items-center justify-center"
           style={{ zIndex: 1 }}
         >
           <motion.div className="relative z-10">
@@ -461,7 +461,7 @@ const Index = () => {
       {/* Scroll-Linked Scaling Video Section */}
       <section
         ref={scrollScaleRef}
-        className="relative bg-transparent pb-24"
+        className="relative bg-transparent py-24"
         style={{ height: "250vh", marginTop: "-100vh", zIndex: 10 }}
       >
         <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
@@ -504,7 +504,7 @@ const Index = () => {
       </section>
 
       {/* Quote Section Wrapper */}
-      <div className="relative" style={{ height: "200vh" }}>
+      <div className="relative">
         {/* Quote Section */}
         <motion.section
           ref={quoteRef}
@@ -512,7 +512,7 @@ const Index = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="sticky top-0 py-24 px-5 bg-[#FAF4EC] h-screen align-middle items-center"
+          className="px-5 bg-[#FAF4EC] h-screen flex items-center justify-center"
           style={{ zIndex: 5 }}
           onViewportEnter={() => setHasAnimated(true)}
         >
@@ -687,8 +687,8 @@ const Index = () => {
             className="sticky top-0 flex items-center justify-center px-5 md:px-0"
             style={{ minHeight: "100vh" }}
           >
-            <div className="max-w-auto mx-auto w-full px-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="max-w-6xl mx-auto w-full">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-[31px]">
                 {/* Green Card - Third to enter */}
                 <motion.div
                   style={{
@@ -744,7 +744,7 @@ const Index = () => {
                               fontWeight: 400,
                               fontSize: "20px",
                               lineHeight: "120%",
-                              letterSpacing: "-3%",
+                              letterSpacing: "-0.03em",
                               textAlign: "right",
                             }}
                           >
@@ -888,7 +888,7 @@ const Index = () => {
                               fontWeight: 400,
                               fontSize: "20px",
                               lineHeight: "120%",
-                              letterSpacing: "-7%",
+                              letterSpacing: "-0.03em",
                               textAlign: "right",
                             }}
                           >
@@ -923,7 +923,7 @@ const Index = () => {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 variants={itemVariants}
-                className="text-3xl md:text-4xl font-semibold text-black pl-20 pb-3 md:px-10 pt-8"
+                className="text-3xl md:text-4xl font-semibold text-black pl-28 pb-3 md:px-16 pt-8"
                 style={{
                   fontWeight: 400,
                   fontSize: "56px",
@@ -978,6 +978,9 @@ const Index = () => {
                       <br />
                       maximum of a curve
                     </h3>
+                    <div className="absolute top-8 right-8 md:top-12 md:right-12 text-7xl md:text-8xl font-bold text-white/20">
+                      01
+                    </div>
                     <div className="flex flex-col items-end gap-1 absolute top-8 right-8 md:top-64 md:right-36">
                       <svg
                         viewBox="0 0 240 180"
@@ -1067,7 +1070,7 @@ const Index = () => {
                       <br />
                       that direction.
                     </h3>
-                    <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 text-7xl md:text-8xl font-bold text-white/20">
+                    <div className="absolute top-8 right-8 md:top-12 md:right-12 text-7xl md:text-8xl font-bold text-white/20">
                       02
                     </div>
                   </div>
@@ -1118,7 +1121,7 @@ const Index = () => {
                       <br />
                       minimize steering error.
                     </h3>
-                    <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 text-7xl md:text-8xl font-bold text-white/20">
+                    <div className="absolute top-8 right-8 md:top-12 md:right-12 text-7xl md:text-8xl font-bold text-white/20">
                       03
                     </div>
                   </div>
@@ -1139,7 +1142,7 @@ const Index = () => {
         className="py-24 bg-[#FAF4EC]"
         onViewportEnter={() => setCardsAnimated(true)}
       >
-        <div className="max-w-auto mx-auto text-center pt-14">
+        <div className="max-w-7xl mx-auto text-center pt-14">
           <motion.h2
             variants={itemVariants}
             className="text-3xl md:text-5xl font-semibold mb-14 text-black pd-14"
@@ -1161,13 +1164,15 @@ const Index = () => {
             <motion.div>
               <Card className="bg-black text-white rounded-[10px] overflow-hidden hover:-translate-y-1 w-full md:w-[481px] h-[466px] mx-auto">
                 <div className=" flex flex-col h-full">
-                  <h3 className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight px-[45px] pt-[36px]"
-                  style={{
-                fontWeight: 400,
-                fontSize: "64px",
-                lineHeight: "100%",
-                letterSpacing: "-0.03em",
-              }}>
+                  <h3
+                    className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight px-[45px] pt-[36px]"
+                    style={{
+                      fontWeight: 400,
+                      fontSize: "64px",
+                      lineHeight: "100%",
+                      letterSpacing: "-0.03em",
+                    }}
+                  >
                     PhD
                     <br />
                     Scholars
@@ -1207,13 +1212,15 @@ const Index = () => {
             <motion.div>
               <Card className="bg-black text-white rounded-[10px] overflow-hidden hover:-translate-y-1 w-full md:w-[481px] h-[466px] mx-auto">
                 <div className=" flex flex-col h-full">
-                  <h3 className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight px-[45px] pt-[36px]"
-                  style={{
-                fontWeight: 400,
-                fontSize: "64px",
-                lineHeight: "100%",
-                letterSpacing: "-0.03em",
-              }}>
+                  <h3
+                    className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight px-[45px] pt-[36px]"
+                    style={{
+                      fontWeight: 400,
+                      fontSize: "64px",
+                      lineHeight: "100%",
+                      letterSpacing: "-0.03em",
+                    }}
+                  >
                     Industry
                     <br />
                     Leaders
@@ -1265,17 +1272,17 @@ const Index = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="py-24 px-5 bg-[#FAF4EC] text-center relative h-screen"
+        className="px-5 bg-[#FAF4EC] text-center relative h-screen flex items-center justify-center"
       >
-        <div className="max-w-auto mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           <motion.h2
             variants={itemVariants}
-            className=" font-normal mb-8 leading-tight"
+            className=" font-normal mb-12 leading-tight"
             style={{
               fontWeight: 400,
               fontSize: "64px",
               lineHeight: "100%",
-              letterSpacing: "-3%",
+              letterSpacing: "-0.03em",
             }}
           >
             Your Students Are Ready to
@@ -1284,12 +1291,12 @@ const Index = () => {
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl md:text-2xl mb-12 max-w-auto mx-auto text-gray-700 leading-relaxed"
+            className="text-xl md:text-2xl mb-14 max-w-auto mx-auto text-gray-700 leading-relaxed"
             style={{
               fontWeight: 400,
               fontSize: "32px",
-              lineHeight: "100%",
-              letterSpacing: "-3%",
+              lineHeight: "110%",
+              letterSpacing: "-0.03em",
             }}
           >
             Stop teaching them to just use technology. Partner with

@@ -28,7 +28,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#fbf1e5]">
       {/* Hero and Vision Wrapper */}
       <div className="relative" style={{ height: "200vh" }}>
         {/* About Us Section - Sticky Hero */}
