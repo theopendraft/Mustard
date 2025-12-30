@@ -13,7 +13,7 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       if (currentScrollY < lastScrollY || currentScrollY < 100) {
         // Scrolling up or near top
         setIsVisible(true);
@@ -21,7 +21,7 @@ const Navigation = () => {
         // Scrolling down
         setIsVisible(false);
       }
-      
+
       setLastScrollY(currentScrollY);
     };
 
@@ -39,7 +39,7 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <div 
+    <div
       className={`w-full px-4 sm:px-6 lg:px-8 pt-4 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
@@ -49,9 +49,7 @@ const Navigation = () => {
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-[#FFC00D]">
-                MUSTARD
-              </span>
+              <span className="text-2xl font-bold text-[#FFC00D]">MUSTARD</span>
             </Link>
 
             {/* Desktop Navigation - Centered */}
