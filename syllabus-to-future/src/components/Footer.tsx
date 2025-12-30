@@ -11,7 +11,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section (no extra MUSTARD heading – only description) */}
           <div className="space-y-4">
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-gray-300 text-sm leading-relaxed"
+            style={{
+                fontFamily: "Inter",
+                fontSize: "14px",
+              }}
+              >
               An initiative by ADRIG AI Technologies Pvt. Ltd. Teaching the technologies of the future directly from your existing syllabus.
             </p>
               
@@ -31,35 +36,35 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-white">
+            <h4 className="font-semibold text-white fontFamily: 'Inter', sans-serif;">
               Quick Links
             </h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm">About Us</Link></li>
-              <li><Link to="/method" className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm">Our Method</Link></li>
-              <li><Link to="/schools" className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm">Partner Schools</Link></li>
-              <li><Link to="/gallery" className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm">Gallery</Link></li>
-              <li><Link to="/team" className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm">Our Team</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm  fontFamily: 'Inter', sans-serif;">About Us</Link></li>
+              <li><Link to="/method" className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm  fontFamily: 'Inter', sans-serif;">Our Method</Link></li>
+              <li><Link to="/schools" className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm  fontFamily: 'Inter', sans-serif;">Partner Schools</Link></li>
+              <li><Link to="/gallery" className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm  fontFamily: 'Inter', sans-serif;">Gallery</Link></li>
+              <li><Link to="/team" className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm  fontFamily: 'Inter', sans-serif;">Our Team</Link></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-white">
+            <h4 className="font-semibold text-white  fontFamily: 'Inter', sans-serif;">
               Contact Us
             </h4>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                <span className="text-gray-300 text-sm">contact@mustard.co.in</span>
+                <span className="text-gray-300 text-sm  fontFamily: 'Inter', sans-serif;">contact@mustard.co.in</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                <span className="text-gray-300 text-sm">+91 8667370744</span>
+                <span className="text-gray-300 text-sm  fontFamily: 'Inter', sans-serif;">+91 8667370744</span>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
-                <span className="text-gray-300 text-sm leading-relaxed">
+                <span className="text-gray-300 text-sm leading-relaxed fontFamily: 'Inter', sans-serif;">
                   No. 2, Sangothi Amman Koil 4th Cross Street,<br />
                   Sembakkam, Chennai - 600073
                 </span>
@@ -73,12 +78,12 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
-              © 2024 <span className="text-primary font-semibold">ADRIG AI Technologies Pvt. Ltd.</span> All rights reserved.
+            <p className="text-gray-400 text-sm  fontFamily: 'Inter', sans-serif;">
+              © 2024 <span className="text-primary font-semibold  fontFamily: 'Inter', sans-serif;">ADRIG AI Technologies Pvt. Ltd.</span> All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">Terms of Service</a>
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm  fontFamily: 'Inter', sans-serif;">Privacy Policy</a>
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm  fontFamily: 'Inter', sans-serif;">Terms of Service</a>
             </div>
           </div>
         </div>

@@ -917,7 +917,7 @@ const Index = () => {
       </section>
 
       {/* Example Section with Stacking Cards */}
-      <div className="relative bg-[#FAF4EC] py-[164px]">
+      <div className="relative bg-[#FAF4EC] py-[80px]">
         <div style={{ height: "280vh" }}>
           {/* Stacking Sections Container */}
           <div className="relative">
@@ -975,7 +975,7 @@ const Index = () => {
                     <h3
                       className="text-4xl md:text-5xl font-normal leading-tight text-black mb-14"
                       style={{
-                        fontWeight: 500,
+                        fontWeight: 400,
                         fontSize: "72px",
                         lineHeight: "121%",
                         letterSpacing: "-0.03em",
@@ -987,7 +987,7 @@ const Index = () => {
                       <br />
                       maximum of a curve
                     </h3>
-                    <div className="absolute top-8 right-8 md:top-12 md:right-12 text-7xl md:text-8xl font-bold text-white/20">
+                    <div className="absolute top-8 right-8 md:top-2 md:right-12 text-7xl md:text-8xl font-normal text-white/20">
                       01
                     </div>
                     <div className="flex flex-col items-end gap-1 absolute top-8 right-8 md:top-64 md:right-36">
@@ -1068,7 +1068,7 @@ const Index = () => {
                     <h3
                       className="text-4xl md:text-5xl font-normal leading-tight text-black"
                       style={{
-                        fontWeight: 500,
+                        fontWeight: 400,
                         fontSize: "72px",
                         lineHeight: "121%",
                         letterSpacing: "-0.03em",
@@ -1080,7 +1080,7 @@ const Index = () => {
                       <br />
                       that direction.
                     </h3>
-                    <div className="absolute top-8 right-8 md:top-12 md:right-12 text-7xl md:text-8xl font-bold text-white/20">
+                    <div className="absolute top-8 right-8 md:top-2 md:right-12 text-7xl md:text-8xl font-normal text-white/20">
                       02
                     </div>
                   </div>
@@ -1119,7 +1119,7 @@ const Index = () => {
                     <h3
                       className="text-4xl md:text-5xl font-normal leading-tight text-black"
                       style={{
-                        fontWeight: 500,
+                        fontWeight: 400,
                         fontSize: "72px",
                         lineHeight: "121%",
                         letterSpacing: "-0.03em",
@@ -1131,7 +1131,7 @@ const Index = () => {
                       <br />
                       minimize steering error.
                     </h3>
-                    <div className="absolute top-8 right-8 md:top-12 md:right-12 text-7xl md:text-8xl font-bold text-white/20">
+                    <div className="absolute top-8 right-8 md:top-2 md:right-12 text-7xl md:text-8xl font-normal text-white/20">
                       03
                     </div>
                   </div>
@@ -1152,7 +1152,7 @@ const Index = () => {
         className="py-[164px] bg-[#FAF4EC]"
         onViewportEnter={() => setCardsAnimated(true)}
       >
-        <div className="max-w-7xl mx-auto text-center pt-14">
+        <div className="max-w-5xl mx-auto text-center pt-14">
           <motion.h2
             variants={itemVariants}
             className="text-3xl md:text-5xl font-semibold mb-14 text-black pd-14"
@@ -1169,11 +1169,11 @@ const Index = () => {
 
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center px-[145px]"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center px-[170px]"
           >
             {/* PhD Scholars card */}
             <motion.div>
-              <Card className="bg-black text-white rounded-[10px] overflow-hidden hover:-translate-y-1 w-full md:w-[481px] h-[466px] mx-auto">
+              <Card className="bg-black text-white rounded-[10px] overflow-hidden hover:-translate-y-1 w-full md:w-[332px] h-[466px] mx-auto">
                 <div className=" flex flex-col h-full">
                   <h3
                     className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight px-[45px] pt-[36px]"
@@ -1185,13 +1185,13 @@ const Index = () => {
                       letterSpacing: "-0.03em",
                     }}
                   >
-                    PhD
+                    PhD 
                     <br />
                     Scholars
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#7371FC] rounded-xl  h-[215.8297576904297px] flex flex-col items-end justify-end mx-[20px] mb-[29px] px-[26px] pb-[34px]"
+                      className="bg-[#7371FC] rounded-xl  h-[215.8297576904297px] flex flex-col items-end justify-end mx-[20px] mb-[29px] px-[20px] pb-[34px]"
                       style={{
                         clipPath: "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "3rem",
@@ -1202,17 +1202,19 @@ const Index = () => {
                         style={{
                           fontFamily: "Inter",
                           fontWeight: 400,
-                          fontSize: "24px",
+                          fontSize: "20px",
                           lineHeight: "100%",
-                          letterSpacing: "-7%",
+                          letterSpacing: "-0.07em",
                           textAlign: "right",
                         }}
                       >
-                        Academic rigour delivered by
+                        Academic rigour delivered
                         <br />
-                        doctorate holders who ensure
+                        by doctorate holders
                         <br />
-                        theoretical depth and accuracy.
+                         who ensure theoretical
+                        <br />
+                        depth and accuracy.
                       </p>
                     </div>
                   </div>
@@ -1222,7 +1224,7 @@ const Index = () => {
 
             {/* Industry Leaders card */}
             <motion.div>
-              <Card className="bg-black text-white rounded-[10px] overflow-hidden hover:-translate-y-1 w-full md:w-[481px] h-[466px] mx-auto">
+              <Card className="bg-black text-white rounded-[10px] overflow-hidden hover:-translate-y-1 w-full md:w-[332px] h-[466px] mx-auto">
                 <div className=" flex flex-col h-full">
                   <h3
                     className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight px-[45px] pt-[36px]"
@@ -1240,7 +1242,7 @@ const Index = () => {
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#43DDA4] rounded-xl  h-[215.8297576904297px] flex flex-col items-end justify-end mx-[20px] mb-[29px] px-[26px] pb-[34px]"
+                      className="bg-[#43DDA4] rounded-xl  h-[215.8297576904297px] flex flex-col items-end justify-end mx-[20px] mb-[29px] px-[20px] pb-[34px]"
                       style={{
                         clipPath: "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "3rem",
@@ -1251,17 +1253,19 @@ const Index = () => {
                         style={{
                           fontFamily: "Inter",
                           fontWeight: 400,
-                          fontSize: "24px",
+                          fontSize: "20px",
                           lineHeight: "100%",
-                          letterSpacing: "-7%",
+                          letterSpacing: "-0.07em",
                           textAlign: "right",
                         }}
                       >
                         Practical insights from
                         <br />
-                        engineering veterans who have
+                        engineering veterans who
                         <br />
-                        built the technologies of today.
+                        have built the technologies
+                        <br />
+                        of today.
                       </p>
                     </div>
                   </div>
@@ -1325,12 +1329,12 @@ const Index = () => {
               transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
             >
               <Button
-                className="bg-[#7371FC] text-white px-12 py-6 text-xl font-normal rounded-md w-[339px] h-[76px]"
+                className="bg-[#7371FC] text-white px-6 py-3 text-xl font-normal rounded-md w-[300px] h-[64px]" 
                 style={{
-                  fontFamily: "Inter",
+                  fontFamily: "'Haffer', sans-serif",
                   fontWeight: 500,
                   fontSize: "32px",
-                  lineHeight: "121%",
+                  lineHeight: "100%",
                   letterSpacing: "-0.03em",
                 }}
                 onClick={() => navigate("/contact")}
