@@ -40,10 +40,11 @@ const About = () => {
             <h1
               className="text-7xl md:text-8xl font-normal mb-16 text-black tracking-tight"
               style={{
+                fontFamily: "'Haffer', sans-serif",
                 fontWeight: 400,
                 fontSize: "110px",
                 lineHeight: "90%",
-                letterSpacing: "-3%",
+                letterSpacing: "-0.03em",
               }}
             >
               About Us
@@ -51,14 +52,15 @@ const About = () => {
             <p
               className="text-2xl md:text-3xl text-black leading-relaxed max-w-auto mx-auto font-medium"
               style={{
+                fontFamily: "'Haffer', sans-serif",
                 fontWeight: 400,
                 fontSize: "48px",
-                lineHeight: "100%",
-                letterSpacing: "-3%",
+                lineHeight: "120%",
+                letterSpacing: "-0.03em",
               }}
             >
               MUSTARD was born from a realization -{" "}
-              <em className="italic font-normal">
+              <em className="italic font-light">
                 The <br />
                 world is changing faster than our textbooks.
               </em>
@@ -83,10 +85,12 @@ const About = () => {
             <h2
               className="text-6xl md:text-7xl font-normal mb-12 text-black"
               style={{
+                
+                fontFamily: "'Haffer', sans-serif",
                 fontWeight: 400,
                 fontSize: "96px",
                 lineHeight: "100%",
-                letterSpacing: "-3%",
+                letterSpacing: "-0.03em",
               }}
             >
               Our Vision
@@ -94,9 +98,10 @@ const About = () => {
             <p
               className="text-2xl md:text-3xl text-black leading-relaxed max-w-auto mx-auto font-normal"
               style={{
+                fontFamily: "'Haffer', sans-serif",
                 fontWeight: 400,
                 fontSize: "56px",
-                lineHeight: "100%",
+                lineHeight: "120%",
                 letterSpacing: "-0.03em",
               }}
             > 
@@ -120,7 +125,7 @@ const About = () => {
           backgroundColor: "#FAF4EC",
         }}
       >
-        <div className="max-w-auto mx-auto w-full px-6">
+        <div className="max-w-6xl mx-auto w-full">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -128,16 +133,18 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="text-6xl md:text-7xl font-normal mb-20 text-center text-black"
             style={{
+                fontFamily: "'Haffer', sans-serif",
               fontWeight: 400,
               fontSize: "96px",
               lineHeight: "100%",
-              letterSpacing: "-3%",
+              letterSpacing: "-0.03em",
             }}
           >
             Our Core Values
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {/* Yellow Card - First to enter */}
+
+            {/* Green Card - Third to enter */}
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -147,55 +154,56 @@ const About = () => {
             >
               <Card
                 className="p-0 h-[400px] md:h-[476px] rounded-[10px] overflow-hidden w-full border-0"
-                style={{ backgroundColor: "#ffbf1f" }}
+                style={{ backgroundColor: "#37e2b4" }}
               >
                 <motion.div
-                  className="text-black h-full flex flex-col "
+                  className="text-black h-full flex flex-col"
                   whileHover={{ y: -8 }}
                   transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                 >
                   <h3
                     className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
-                    style={{
+                    style={{  
+                      fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
                       fontSize: "48px",
                       lineHeight: "100%",
-                      letterSpacing: "-3%",
+                      letterSpacing: "-0.03em",
                     }}
                   >
-                    Empowerment
+                    Relevance
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#FAF4EC] rounded-xl px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
+                      className="bg-[#FAF4EC] px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px] "
                       style={{
                         clipPath:
                           "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "2rem",
+                        borderRadius: "10px",
                       }}
                     >
                       <p
-                        className="opacity-90 text-sm md:text-base"
+                        className="opacity-90 text-black text-sm md:text-base"
                         style={{
-                          fontFamily: "Inter",
-                          fontWeight: 400,
-                          fontSize: "24px",
-                          lineHeight: "120%",
-                          letterSpacing: "-3%",
-                          textAlign: "right",
-                        }}
+                              
+                              fontFamily: "Inter",
+                              fontWeight: 400,
+                              fontSize: "20px",
+                              lineHeight: "120%",
+                              letterSpacing: "-0.03em",
+                              textAlign: "right",
+                            }}
                       >
-                         Students should feel 
-                         <br />
-                         capable, not intimidated,
-                         <br />
-                         by complex tech.
+                        Every lesson must answer "Why does this matter?"
                       </p>
                     </div>
                   </div>
                 </motion.div>
               </Card>
             </motion.div>
+
+
 
             {/* Purple Card - Second to enter */}
             <motion.div
@@ -217,33 +225,37 @@ const About = () => {
                   <h3
                     className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
                     style={{
+                      
+                      fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
                       fontSize: "48px",
                       lineHeight: "100%",
-                      letterSpacing: "-3%",
+                      letterSpacing: "-0.03em",
                     }}
                   >
                     Integration
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#FAF4EC] rounded-xl px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
+                      className="bg-[#FAF4EC] px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
                       style={{
                         clipPath:
                           "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "2rem",
+                        borderRadius: "10px",
                       }}
                     >
                       <p
                         className="opacity-90 text-sm md:text-base"
                         style={{
-                          fontFamily: "Inter",
-                          fontWeight: 400,
-                          fontSize: "24px",
-                          lineHeight: "120%",
-                          letterSpacing: "-3%",
-                          textAlign: "right",
-                        }}
+                              
+                              fontFamily: "Inter",
+                              fontWeight: 400,
+                              fontSize: "20px",
+                              lineHeight: "120%",
+                              letterSpacing: "-0.03em",
+                              textAlign: "right",
+                            }}
                       >
                         Technology is not a 
                         <br />
@@ -256,8 +268,8 @@ const About = () => {
                 </motion.div>
               </Card>
             </motion.div>
-
-            {/* Green Card - Third to enter */}
+            
+                        {/* Yellow Card - First to enter */}
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -267,51 +279,59 @@ const About = () => {
             >
               <Card
                 className="p-0 h-[400px] md:h-[476px] rounded-[10px] overflow-hidden w-full border-0"
-                style={{ backgroundColor: "#37e2b4" }}
+                style={{ backgroundColor: "#ffbf1f" }}
               >
                 <motion.div
-                  className="text-black h-full flex flex-col"
+                  className="text-black h-full flex flex-col "
                   whileHover={{ y: -8 }}
                   transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                 >
                   <h3
                     className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
                     style={{
+                      fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
                       fontSize: "48px",
                       lineHeight: "100%",
-                      letterSpacing: "-3%",
+                      letterSpacing: "-0.03em",
                     }}
                   >
-                    Relevance
+                    Empowerment
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#FAF4EC] rounded-xl px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
+                      className="bg-[#FAF4EC] px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
                       style={{
                         clipPath:
                           "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "2rem",
+                        borderRadius: "10px",
                       }}
                     >
                       <p
-                        className="opacity-90 text-black text-sm md:text-base"
+                        className="opacity-90 text-sm md:text-base"
                         style={{
-                          fontFamily: "Inter",
-                          fontWeight: 400,
-                          fontSize: "24px",
-                          lineHeight: "120%",
-                          letterSpacing: "-3%",
-                          textAlign: "right",
-                        }}
+                              
+                              fontFamily: "Inter",
+                              fontWeight: 400,
+                              fontSize: "20px",
+                              lineHeight: "120%",
+                              letterSpacing: "-0.03em",
+                              textAlign: "right",
+                            }}
                       >
-                        Every lesson must answer "Why does this matter?"
+                         Students should feel 
+                         <br />
+                         capable, not intimidated,
+                         <br />
+                         by complex tech.
                       </p>
                     </div>
                   </div>
                 </motion.div>
               </Card>
             </motion.div>
+            
           </div>
         </div>
       </section>
@@ -320,7 +340,7 @@ const About = () => {
         /* Schools We Serve Section */
         <section className="py-32 px-5">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-normal mb-20 text-center text-black">
+            <h2 className="text-6xl md:text-7xl font-normal mb-20 text-center text-black fontfamily-['Haffer',sans-serif]">
               Schools We Serve
             </h2>
 
@@ -330,10 +350,24 @@ const About = () => {
                   key={index}
                   className="p-8 bg-transparent rounded-3xl border border-[#EAE4D8] shadow-sm"
                 >
-                  <h3 className="text-xl font-normal mb-2 text-black leading-tight">
+                  <h3 className="text-xl font-normal mb-2 text-black leading-tight"
+                  style={{  
+                      fontFamily: "'Haffer', sans-serif",
+                      fontWeight: 400,
+                      fontSize: "24px",
+                      lineHeight: "100%",
+                      letterSpacing: "-0.03em",
+                    }}>
                     {school.name}
                   </h3>
-                  <p className="text-lg italic text-gray-700">
+                  <p className="text-lg italic text-gray-700 "
+                  style={{  
+                      fontFamily: "'Haffer', sans-serif",
+                      fontWeight: 400,
+                      fontSize: "20px",
+                      lineHeight: "100%",
+                      letterSpacing: "-0.03em",
+                    }}>
                     {school.location}
                   </p>
                 </div>

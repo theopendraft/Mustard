@@ -49,11 +49,30 @@ const Navigation = () => {
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-[#FFC00D]">MUSTARD</span>
+              <span
+                className="text-2xl font-bold text-[#FFC00D]"
+                style={{
+                  fontFamily: "Haffer, sans-serif",
+                  fontWeight: 500,
+                  lineHeight: "100%",
+                  letterSpacing: "-3%",
+                }}
+              >
+                MUSTARD
+              </span>
             </Link>
 
             {/* Desktop Navigation - Centered */}
-            <div className="hidden lg:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-[10px] shadow-sm px-8 py-3">
+            <div
+              className="hidden lg:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-[10px] shadow-sm px-8 py-3"
+              style={{
+                fontFamily: "Inter",
+                fontWeight: 500,
+                lineHeight: "90%",
+                letterSpacing: "-0.03em",
+                fontSize: "16px",
+              }}
+            >
               {navItems.map((item) => (
                 <Link
                   key={item.name}
@@ -74,6 +93,13 @@ const Navigation = () => {
               <Button
                 className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2"
                 onClick={() => navigate("/contact")}
+                style={{
+                  fontFamily: "Inter",
+                  fontWeight: 500,
+                  lineHeight: "90%",
+                  letterSpacing: "-0.03em",
+                  fontSize: "16px",
+                }}
               >
                 Get Started
               </Button>
