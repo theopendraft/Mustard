@@ -14,7 +14,7 @@ const Footer = () => {
             <p className="text-gray-300 text-sm leading-relaxed">
               An initiative by ADRIG AI Technologies Pvt. Ltd. Teaching the technologies of the future directly from your existing syllabus.
             </p>
-            
+              
             {/* Social Links */}
             <div className="flex space-x-4">
               <a href="#" className="w-8 h-8 bg-white/10 flex items-center justify-center hover:bg-primary/20 transition-all duration-300">
@@ -88,6 +88,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-9xl md:text-5xl font-normal text-center" 
           style={{
+              fontFamily: "'Haffer', sans-serif",
               fontWeight: 400,
               fontSize: "128px",
               lineHeight: "100%",

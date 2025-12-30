@@ -431,9 +431,11 @@ const Index = () => {
               transition={{ duration: 1, ease: [0.23, 1, 0.32, 1] }}
               className="text-black"
               style={{
+                
+                fontFamily: "'Haffer', sans-serif",
                 fontWeight: 400,
                 fontSize: "110px",
-                lineHeight: "100%",
+                lineHeight: "90%",
                 letterSpacing: "-0.03em",
                 textAlign: "center",
                 opacity: heroOpacity,
@@ -524,10 +526,11 @@ const Index = () => {
                 rotate: tagScrollRotate,
                 scale: tagScrollScale,
                 opacity: tagScrollOpacity,
+                fontFamily: "'Haffer', sans-serif",
                 fontWeight: 400,
                 fontSize: "48px",
                 lineHeight: "100%",
-                letterSpacing: "-3%",
+                letterSpacing: "-0.03em",
               }}
               className="inline-block bg-[#7b68ee] text-black px-8 py-3 rounded-2xl text-base md:text-xl font-normal mb-8 shadow-lg text-center mx-14"
             >
@@ -540,7 +543,7 @@ const Index = () => {
               transition={{ staggerChildren: 0.015, delayChildren: 0.3 }}
               className="text-center mx-auto px-3 "
               style={{
-                fontFamily: "Inter",
+                fontFamily: "'Haffer', sans-serif",
                 fontWeight: 400,
                 fontSize: "64px",
                 lineHeight: "100%",
@@ -602,6 +605,7 @@ const Index = () => {
             transition={{ staggerChildren: 0.015, delayChildren: 0.1 }}
             className="text-2xl md:text-auto font-normal text-white text-right ml-auto"
             style={{
+              fontFamily: "'Haffer', sans-serif",
               fontWeight: 400,
               fontSize: "56px",
               lineHeight: "100%",
@@ -717,10 +721,11 @@ const Index = () => {
                       <h3
                         className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
                         style={{
+                          fontFamily: "'Haffer', sans-serif",
                           fontWeight: 400,
                           fontSize: "48px",
                           lineHeight: "100%",
-                          letterSpacing: "-3%",
+                          letterSpacing: "-0.03em",
                         }}
                       >
                         Evolution, Not
@@ -740,6 +745,7 @@ const Index = () => {
                           <p
                             className="opacity-90 text-black text-sm md:text-base"
                             style={{
+                              
                               fontFamily: "Inter",
                               fontWeight: 400,
                               fontSize: "20px",
@@ -790,10 +796,11 @@ const Index = () => {
                       <h3
                         className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
                         style={{
+                          fontFamily: "'Haffer', sans-serif",
                           fontWeight: 400,
                           fontSize: "48px",
                           lineHeight: "100%",
-                          letterSpacing: "-3%",
+                          letterSpacing: "-0.03em",
                         }}
                       >
                         Context-First
@@ -817,7 +824,7 @@ const Index = () => {
                               fontWeight: 400,
                               fontSize: "20px",
                               lineHeight: "120%",
-                              letterSpacing: "-3%",
+                              letterSpacing: "-0.03em",
                               textAlign: "right",
                             }}
                           >
@@ -861,10 +868,11 @@ const Index = () => {
                       <h3
                         className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
                         style={{
+                          fontFamily: "'Haffer', sans-serif",
                           fontWeight: 400,
                           fontSize: "48px",
                           lineHeight: "100%",
-                          letterSpacing: "-3%",
+                          letterSpacing: "-0.03em",
                         }}
                       >
                         Creator
@@ -909,7 +917,7 @@ const Index = () => {
       </section>
 
       {/* Example Section with Stacking Cards */}
-      <div className="relative bg-[#FAF4EC]">
+      <div className="relative bg-[#FAF4EC] py-[164px]">
         <div style={{ height: "280vh" }}>
           {/* Stacking Sections Container */}
           <div className="relative">
@@ -923,12 +931,13 @@ const Index = () => {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 variants={itemVariants}
-                className="text-3xl md:text-4xl font-semibold text-black pl-28 pb-3 md:px-16 pt-8"
+                className="text-3xl md:text-4xl font-semibold text-black pl-28 py-8 md:px-16"
                 style={{
+                  fontFamily: "'Haffer', sans-serif",
                   fontWeight: 400,
                   fontSize: "56px",
                   lineHeight: "100%",
-                  letterSpacing: "-3%",
+                  letterSpacing: "-0.03em",
                 }}
               >
                 Let us show you an example
@@ -942,13 +951,13 @@ const Index = () => {
               viewport={{ once: true, margin: "-100px" }}
               variants={containerVariants}
               className="sticky px-5 bg-transparent flex items-center"
-              style={{ top: "120px", zIndex: 1, height: "calc(100vh - 120px)" }}
+              style={{ top: "120px", zIndex: 1 }}
             >
               <div className="max-w-screen mx-auto w-full ">
                 <motion.div
                   variants={slideUpVariants}
                   className="bg-[#e6ded1] px-12 md:px-16 py-8 md:py-6 relative duration-500 max-w-full"
-                  style={{ borderRadius: "24px", height: "100%" }}
+                  style={{ borderRadius: "24px",  height: "calc(100vh - 120px)" }}
                 >
                   <div
                     className=" bg-white text-black px-8 py-3 rounded-md  mb-12 inline-block items-center justify-cente"
@@ -957,7 +966,7 @@ const Index = () => {
                       fontWeight: 500,
                       fontSize: "32px",
                       lineHeight: "121%",
-                      letterSpacing: "-3%",
+                      letterSpacing: "-0.03em",
                     }}
                   >
                     The School Lesson
@@ -969,7 +978,7 @@ const Index = () => {
                         fontWeight: 500,
                         fontSize: "72px",
                         lineHeight: "121%",
-                        letterSpacing: "-3%",
+                        letterSpacing: "-0.03em",
                       }}
                     >
                       Differentiation is used to find
@@ -1019,13 +1028,13 @@ const Index = () => {
               viewport={{ once: true, margin: "-100px" }}
               variants={containerVariants}
               className="sticky px-5 bg-transparent flex items-center"
-              style={{ top: "120px", zIndex: 2, height: "calc(100vh - 120px)" }}
+              style={{ top: "40px", zIndex: 2, }}
             >
               <div className="max-w-screen mx-auto w-full mt-20">
                 <motion.div
                   variants={slideUpVariants}
                   className="bg-[#ffc700] px-12 md:px-16 py-8 md:py-6 relative duration-500 max-w-full"
-                  style={{ borderRadius: "24px", height: "100%" }}
+                  style={{ borderRadius: "24px",  height: "calc(100vh - 120px)" }}
                 >
                   <div
                     className=" bg-white text-black px-8 py-3 rounded-md  mb-12 inline-block items-center justify-center"
@@ -1034,7 +1043,7 @@ const Index = () => {
                       fontWeight: 500,
                       fontSize: "32px",
                       lineHeight: "121%",
-                      letterSpacing: "-3%",
+                      letterSpacing: "-0.03em",
                     }}
                   >
                     MUSTARD Upgrade
@@ -1043,11 +1052,12 @@ const Index = () => {
                     <div
                       className="bg-[#7371FC] text-black px-8 py-6  transform rotate-6"
                       style={{
+                        fontFamily: "'Haffer', sans-serif",
                         borderRadius: "16px",
                         fontWeight: 400,
                         fontSize: "36px",
                         lineHeight: "100%",
-                        letterSpacing: "-3%",
+                        letterSpacing: "-0.03em",
                         textAlign: "center",
                       }}
                     >
@@ -1061,7 +1071,7 @@ const Index = () => {
                         fontWeight: 500,
                         fontSize: "72px",
                         lineHeight: "121%",
-                        letterSpacing: "-3%",
+                        letterSpacing: "-0.03em",
                       }}
                     >
                       AI detects which way error
@@ -1085,13 +1095,13 @@ const Index = () => {
               viewport={{ once: true, margin: "-100px" }}
               variants={containerVariants}
               className="sticky px-5 bg-transparent flex items-center "
-              style={{ top: "120px", zIndex: 3, height: "calc(100vh - 120px)" }}
+              style={{ top: "120px", zIndex: 3, }}
             >
               <div className="max-w-screen mx-auto w-full mt-20">
                 <motion.div
                   variants={slideUpVariants}
                   className="bg-[#2bdba0] px-12 md:px-16 py-8 md:py-6 relative duration-500 max-w-full"
-                  style={{ borderRadius: "24px", height: "100%" }}
+                  style={{ borderRadius: "24px",  height: "calc(100vh - 120px)" }}
                 >
                   <div
                     className="inline-block bg-white text-black px-8 py-3 rounded-md shadow-sm mb-12 items-center justify-center"
@@ -1100,7 +1110,7 @@ const Index = () => {
                       fontWeight: 500,
                       fontSize: "32px",
                       lineHeight: "121%",
-                      letterSpacing: "-3%",
+                      letterSpacing: "-0.03em",
                     }}
                   >
                     The Build
@@ -1112,7 +1122,7 @@ const Index = () => {
                         fontWeight: 500,
                         fontSize: "72px",
                         lineHeight: "121%",
-                        letterSpacing: "-3%",
+                        letterSpacing: "-0.03em",
                       }}
                     >
                       A self-driving bot that uses
@@ -1139,7 +1149,7 @@ const Index = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="py-24 bg-[#FAF4EC]"
+        className="py-[164px] bg-[#FAF4EC]"
         onViewportEnter={() => setCardsAnimated(true)}
       >
         <div className="max-w-7xl mx-auto text-center pt-14">
@@ -1147,10 +1157,11 @@ const Index = () => {
             variants={itemVariants}
             className="text-3xl md:text-5xl font-semibold mb-14 text-black pd-14"
             style={{
+              fontFamily: "'Haffer', sans-serif",
               fontWeight: 400,
               fontSize: "64px",
               lineHeight: "100%",
-              letterSpacing: "-3%",
+              letterSpacing: "-0.03em",
             }}
           >
             Mentored by Masters
@@ -1167,6 +1178,7 @@ const Index = () => {
                   <h3
                     className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight px-[45px] pt-[36px]"
                     style={{
+                      fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
                       fontSize: "64px",
                       lineHeight: "100%",
@@ -1215,6 +1227,7 @@ const Index = () => {
                   <h3
                     className="text-4xl md:text-5xl font-normal text-left mb-10 leading-tight px-[45px] pt-[36px]"
                     style={{
+                      fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
                       fontSize: "64px",
                       lineHeight: "100%",
@@ -1279,6 +1292,7 @@ const Index = () => {
             variants={itemVariants}
             className=" font-normal mb-12 leading-tight"
             style={{
+              fontFamily: "'Haffer', sans-serif",
               fontWeight: 400,
               fontSize: "64px",
               lineHeight: "100%",
@@ -1293,6 +1307,7 @@ const Index = () => {
             variants={itemVariants}
             className="text-xl md:text-2xl mb-14 max-w-auto mx-auto text-gray-700 leading-relaxed"
             style={{
+              fontFamily: "'Haffer', sans-serif",
               fontWeight: 400,
               fontSize: "32px",
               lineHeight: "110%",
@@ -1316,7 +1331,7 @@ const Index = () => {
                   fontWeight: 500,
                   fontSize: "32px",
                   lineHeight: "121%",
-                  letterSpacing: "-3%",
+                  letterSpacing: "-0.03em",
                 }}
                 onClick={() => navigate("/contact")}
               >
