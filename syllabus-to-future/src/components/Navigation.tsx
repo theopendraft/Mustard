@@ -38,6 +38,23 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    path: string
+  ) => {
+    if (location.pathname === path) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <div
       className={`w-full px-4 sm:px-6 lg:px-8 pt-4 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
@@ -48,7 +65,11 @@ const Navigation = () => {
       <nav className="z-50 max-w-7xl mx-auto">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link to="/" className="flex items-center">
+            <Link
+              to="/"
+              className="flex items-center"
+              onClick={handleLogoClick}
+            >
               <span
                 className="text-2xl font-bold text-[#FFC00D]"
                 style={{
@@ -77,6 +98,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
+                  onClick={(e) => handleNavClick(e, item.path)}
                   className={`text-sm font-medium transition-colors duration-200 ${
                     isActive(item.path)
                       ? "text-primary"
@@ -91,7 +113,7 @@ const Navigation = () => {
             {/* Get Started Button - Right */}
             <div className="hidden lg:flex">
               <Button
-                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2"
+                className="bg-[#FFC00D] hover:bg-[#dca40c] text-white px-6 py-2"
                 onClick={() => navigate("/contact")}
                 style={{
                   fontFamily: "Inter",
@@ -124,7 +146,10 @@ const Navigation = () => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => {
+                      handleNavClick(e, item.path);
+                      setIsOpen(false);
+                    }}
                     className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
                       isActive(item.path)
                         ? "text-primary bg-primary/10"
