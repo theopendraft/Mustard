@@ -131,7 +131,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-6xl md:text-7xl font-normal mb-20 text-center text-black"
+            className="text-6xl md:text-7xl font-normal mb-14 text-center text-black"
             style={{
                 fontFamily: "'Haffer', sans-serif",
               fontWeight: 400,
@@ -153,7 +153,7 @@ const About = () => {
               className="w-full"
             >
               <Card
-                className="p-0 h-[400px] md:h-[476px] rounded-[10px] overflow-hidden w-full border-0"
+                className="p-0 h-[400px] md:h-[436px] w-[332px rounded-[10px] overflow-hidden w-full border-0"
                 style={{ backgroundColor: "#37e2b4" }}
               >
                 <motion.div
@@ -214,7 +214,7 @@ const About = () => {
               className="w-full"
             >
               <Card
-                className="p-0 h-[400px] md:h-[476px] rounded-[10px] overflow-hidden w-full border-0"
+                className="p-0 h-[400px] md:h-[436px] w-[332px rounded-[10px] overflow-hidden w-full border-0"
                 style={{ backgroundColor: "#7371FC" }}
               >
                 <motion.div
@@ -278,7 +278,7 @@ const About = () => {
               className="w-full"
             >
               <Card
-                className="p-0 h-[400px] md:h-[476px] rounded-[10px] overflow-hidden w-full border-0"
+                className="p-0 h-[400px] md:h-[436px] w-[332px rounded-[10px] overflow-hidden border-0"
                 style={{ backgroundColor: "#ffbf1f" }}
               >
                 <motion.div
@@ -340,7 +340,15 @@ const About = () => {
         /* Schools We Serve Section */
         <section className="py-32 px-5">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-normal mb-20 text-center text-black fontfamily-['Haffer',sans-serif]">
+            <h2 className="text-6xl md:text-7xl font-normal mb-20 text-center text-black fontfamily-['Haffer',sans-serif]"
+            style={{  
+                      fontFamily: "'Haffer', sans-serif",
+                      fontWeight: 400,
+                      fontSize: "96px",
+                      lineHeight: "100%",
+                      letterSpacing: "-0.03em",
+                    }}>
+            
               Schools We Serve
             </h2>
 
