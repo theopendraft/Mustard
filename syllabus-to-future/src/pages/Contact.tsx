@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,12 +9,12 @@ import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    schoolName: '',
-    role: '',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    schoolName: "",
+    role: "",
+    phone: "",
+    message: "",
   });
   const { toast } = useToast();
 
@@ -22,22 +22,25 @@ const Contact = () => {
     e.preventDefault();
     toast({
       title: "Message Sent!",
-      description: "Thank you for your interest. We'll get back to you within 24 hours.",
+      description:
+        "Thank you for your interest. We'll get back to you within 24 hours.",
     });
     setFormData({
-      name: '',
-      email: '',
-      schoolName: '',
-      role: '',
-      phone: '',
-      message: ''
+      name: "",
+      email: "",
+      schoolName: "",
+      role: "",
+      phone: "",
+      message: "",
     });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -45,12 +48,31 @@ const Contact = () => {
     <div className="min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h1 className="font-heading font-bold text-4xl sm:text-5xl mb-6">
-            Partner <span className="text-gradient">With Us</span>
+        <div className="text-center mb-16 pt-20 animate-fade-in">
+          <h1
+            className="font-bold mb-6"
+            style={{
+              fontFamily: "'Haffer', sans-serif",
+              fontWeight: 400,
+              fontSize: "96px",
+              lineHeight: "100%",
+              letterSpacing: "-0.03em",
+            }}
+          >
+            Partner With Us
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to bring the future of education to your school? Let's start a conversation about transforming your students' learning experience.
+          <p
+            className="text-muted-foreground max-w-3xl mx-auto"
+            style={{
+              fontFamily: "'Haffer', sans-serif",
+              fontWeight: 400,
+              fontSize: "24px",
+              lineHeight: "140%",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Ready to bring the future of education to your school? Let's start a
+            conversation about transforming your students' learning experience.
           </p>
         </div>
 
@@ -59,8 +81,19 @@ const Contact = () => {
           <div className="animate-slide-up">
             <Card className="hover-lift">
               <CardContent className="p-8">
-                <h2 className="font-heading font-semibold text-2xl mb-6">Get Started Today</h2>
-                
+                <h2
+                  className="font-semibold mb-6"
+                  style={{
+                    fontFamily: "'Haffer', sans-serif",
+                    fontWeight: 400,
+                    fontSize: "36px",
+                    lineHeight: "120%",
+                    letterSpacing: "-0.02em",
+                  }}
+                >
+                  Get Started Today
+                </h2>
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -156,37 +189,53 @@ const Contact = () => {
             {/* Contact Details */}
             <Card className="hover-lift">
               <CardContent className="p-8">
-                <h3 className="font-heading font-semibold text-xl mb-6">Contact Information</h3>
-                
+                <h3
+                  className="font-semibold mb-6"
+                  style={{
+                    fontFamily: "'Haffer', sans-serif",
+                    fontWeight: 400,
+                    fontSize: "28px",
+                    lineHeight: "120%",
+                    letterSpacing: "-0.02em",
+                  }}
+                >
+                  Contact Information
+                </h3>
+
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <MapPin className="h-5 w-5 text-primary mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <p className="font-medium">ADRIG AI Technologies Pvt. Ltd.</p>
+                      <p className="font-medium">
+                        ADRIG AI Technologies Pvt. Ltd.
+                      </p>
                       <p className="text-muted-foreground">
-                        No. 2, Sangothi Amman Koil 4th Cross Street,<br />
-                        Sembakkam, Chennai - 600073<br />
+                        No. 2, Sangothi Amman Koil 4th Cross Street,
+                        <br />
+                        Sembakkam, Chennai - 600073
+                        <br />
                         Tamil Nadu, India
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center">
                     <Phone className="h-5 w-5 text-primary mr-3" />
                     <span>+91 8667370744</span>
                   </div>
-                  
+
                   <div className="flex items-center">
                     <Mail className="h-5 w-5 text-primary mr-3" />
                     <span>contact@mustard.co.in</span>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <Clock className="h-5 w-5 text-primary mt-1 mr-3 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Office Hours</p>
                       <p className="text-muted-foreground">
-                        Monday - Friday: 9:00 AM - 6:00 PM<br />
+                        Monday - Friday: 9:00 AM - 6:00 PM
+                        <br />
                         Saturday: 10:00 AM - 4:00 PM
                       </p>
                     </div>
@@ -198,7 +247,18 @@ const Contact = () => {
             {/* Quick Stats */}
             <Card className="hover-lift">
               <CardContent className="p-8">
-                <h3 className="font-heading font-semibold text-xl mb-6">Why Schools Choose Us</h3>
+                <h3
+                  className="font-semibold mb-6"
+                  style={{
+                    fontFamily: "'Haffer', sans-serif",
+                    fontWeight: 400,
+                    fontSize: "28px",
+                    lineHeight: "120%",
+                    letterSpacing: "-0.02em",
+                  }}
+                >
+                  Why Schools Choose Us
+                </h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Response Time</span>
@@ -209,11 +269,15 @@ const Contact = () => {
                     <span className="font-bold text-primary">2 Weeks</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Teacher Training</span>
+                    <span className="text-muted-foreground">
+                      Teacher Training
+                    </span>
                     <span className="font-bold text-primary">Included</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Curriculum Support</span>
+                    <span className="text-muted-foreground">
+                      Curriculum Support
+                    </span>
                     <span className="font-bold text-primary">Ongoing</span>
                   </div>
                 </div>
@@ -223,29 +287,54 @@ const Contact = () => {
             {/* Next Steps */}
             <Card className="hover-lift bg-gradient-to-r from-primary/5 to-secondary/5">
               <CardContent className="p-8">
-                <h3 className="font-heading font-semibold text-xl mb-4">What Happens Next?</h3>
+                <h3
+                  className="font-semibold mb-4"
+                  style={{
+                    fontFamily: "'Haffer', sans-serif",
+                    fontWeight: 400,
+                    fontSize: "28px",
+                    lineHeight: "120%",
+                    letterSpacing: "-0.02em",
+                  }}
+                >
+                  What Happens Next?
+                </h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex items-start">
-                    <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">1</span>
+                    <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                      1
+                    </span>
                     <div>
-                      <p className="font-medium">We'll contact you within 24 hours</p>
-                      <p className="text-muted-foreground">Initial discussion about your needs</p>
+                      <p className="font-medium">
+                        We'll contact you within 24 hours
+                      </p>
+                      <p className="text-muted-foreground">
+                        Initial discussion about your needs
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
-                    <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">2</span>
+                    <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                      2
+                    </span>
                     <div>
                       <p className="font-medium">Schedule a demo session</p>
-                      <p className="text-muted-foreground">See our teaching method in action</p>
+                      <p className="text-muted-foreground">
+                        See our teaching method in action
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
-                    <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">3</span>
+                    <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                      3
+                    </span>
                     <div>
                       <p className="font-medium">Pilot program design</p>
-                      <p className="text-muted-foreground">Customized for your school's needs</p>
+                      <p className="text-muted-foreground">
+                        Customized for your school's needs
+                      </p>
                     </div>
                   </div>
                 </div>

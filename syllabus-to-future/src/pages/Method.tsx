@@ -200,7 +200,7 @@ const Method = () => {
                     style={{
                       fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
-                      fontSize: "56px",
+                      fontSize: "72px",
                       lineHeight: "100%",
                       letterSpacing: "-0.03em",
                     }}
@@ -255,7 +255,7 @@ const Method = () => {
                     style={{
                       fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
-                      fontSize: "56px",
+                      fontSize: "72px",
                       lineHeight: "100%",
                       letterSpacing: "-0.03em",
                     }}
@@ -309,7 +309,7 @@ const Method = () => {
                     style={{
                       fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
-                      fontSize: "56px",
+                      fontSize: "72px",
                       lineHeight: "100%",
                       letterSpacing: "-0.03em",
                     }}
@@ -364,7 +364,7 @@ const Method = () => {
                     style={{
                       fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
-                      fontSize: "56px",
+                      fontSize: "72px",
                       lineHeight: "100%",
                       letterSpacing: "-0.03em",
                     }}
@@ -393,7 +393,7 @@ const Method = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-5xl md:text-6xl lg:text-7xl font-normal text-black mb-[49px] text-center leading-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-normal text-black mb-[28px] text-center leading-tight"
             style={{
               fontFamily: "'Haffer', sans-serif",
               fontWeight: 400,
@@ -403,18 +403,18 @@ const Method = () => {
             }}
           >
             From Textbooks to
-            <br />
+            
             Technology
           </motion.h2>
 
           {/* Track Navigation */}
           <motion.nav
             variants={itemVariants}
-            className="flex justify-center gap-4 md:gap-6 mb-[49px] "
+            className="flex justify-center gap-4 md:gap-2 mb-[28px] "
           >
             <button
               onClick={() => setActiveTrack("physics")}
-              className={`px-10 py-3 rounded-md text-base md:text-lg font-normal transition-all duration-300 shadow-sm ${
+              className={`px-8 py-3 rounded-md text-base md:text-lg font-normal transition-all duration-300 shadow-sm ${
                 activeTrack === "physics"
                   ? "bg-[#FFC00D] text-white"
                   : "bg-white text-black hover:bg-gray-50"
@@ -422,8 +422,8 @@ const Method = () => {
               style={{
                 fontFamily: "Inter",
                 fontWeight: 400,
-                fontSize: "24px",
-                lineHeight: "121%",
+                fontSize: "16px",
+                lineHeight: "100%",
                 letterSpacing: "-0.03em",
               }}
             >
@@ -431,7 +431,7 @@ const Method = () => {
             </button>
             <button
               onClick={() => setActiveTrack("maths")}
-              className={`px-10 py-3 rounded-md text-base md:text-lg font-normal transition-all duration-300 shadow-sm ${
+              className={`px-8 py-3 rounded-md text-base md:text-lg font-normal transition-all duration-300 shadow-sm ${
                 activeTrack === "maths"
                   ? "bg-[#FFC00D]   text-white"
                   : "bg-white text-black hover:bg-gray-50"
@@ -439,8 +439,8 @@ const Method = () => {
               style={{
                 fontFamily: "Inter",
                 fontWeight: 400,
-                fontSize: "24px",
-                lineHeight: "121%",
+                fontSize: "16px",
+                lineHeight: "100%",
                 letterSpacing: "-0.03em",
               }}
             >
@@ -448,7 +448,7 @@ const Method = () => {
             </button>
             <button
               onClick={() => setActiveTrack("chemistry")}
-              className={`px-10 py-3 rounded-md text-base md:text-lg font-normal transition-all duration-300 shadow-sm ${
+              className={`px-8 py-3 rounded-md text-base md:text-lg font-normal transition-all duration-300 shadow-sm ${
                 activeTrack === "chemistry"
                   ? "bg-[#FFC00D] text-white"
                   : "bg-white text-black hover:bg-gray-50"
@@ -456,8 +456,8 @@ const Method = () => {
               style={{
                 fontFamily: "Inter",
                 fontWeight: 400,
-                fontSize: "24px",
-                lineHeight: "121%",
+                fontSize: "16px",
+                lineHeight: "100%",
                 letterSpacing: "-0.03em",
               }}
             >
@@ -471,7 +471,7 @@ const Method = () => {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-[#EAE4D8] px-8 py-12 rounded-xl max-w-full"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-[#EAE4D8] px-3 py-3 rounded-xl max-w-6xl mx-auto"
           >
             {trackData[activeTrack as keyof typeof trackData].map(
               (card, index) => (
@@ -483,7 +483,7 @@ const Method = () => {
                   className="w-full"
                 >
                   <Card
-                    className="p-0 h-[400px] md:h-[436px] w-[332px rounded-[10px] overflow-hidden w-full border-0"
+                    className="p-0 h-[400px] md:h-[428px] w-[332px rounded-[10px] overflow-hidden w-full border-0"
                     style={{ backgroundColor: "#FAF4EC" }}
                   >
                     <motion.div
