@@ -1,37 +1,30 @@
 import { motion } from "framer-motion";
-import classroom1 from "@/assets/classroom-1.jpg";
-import classroom2 from "@/assets/classroom-2.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import studentSuccess from "@/assets/student-success.jpg";
-import mathToAi from "@/assets/math-to-ai.jpg";
 
 // Data structure for easy updates
 const GALLERY_ITEMS = [
   // Column 1 - Three standard images
   {
     id: 1,
-    imageUrl: classroom1,
+    imageUrl: "/gallery/selected/IMG_0185.JPG",
     altText: "Interactive STEM Learning Session",
     span: "col-span-1 row-span-1",
   },
   {
     id: 2,
-    imageUrl: mathToAi,
+    imageUrl: "/gallery/selected/IMG_0510.JPG",
     altText: "Math to Machine Learning Workshop",
     span: "col-span-1 row-span-1",
   },
   {
     id: 3,
-    imageUrl: gallery1,
+    imageUrl: "/gallery/selected/IMG_0810.JPG",
     altText: "Science Lab Innovation",
     span: "col-span-1 row-span-1",
   },
   // Column 2 - First image spans 2 columns horizontally
   {
     id: 4,
-    imageUrl: gallery2,
+    imageUrl: "/gallery/selected/IMG_0852.JPG",
     altText: "Robotics Competition Event",
     span: "col-span-2 row-span-1",
     height: "h-[321px]",
@@ -39,27 +32,27 @@ const GALLERY_ITEMS = [
   },
   {
     id: 5,
-    imageUrl: gallery3,
+    imageUrl: "/gallery/selected/IMG_0975.JPG",
     altText: "Teacher Training Workshop",
     span: "col-span-1 row-span-1",
   },
   // Column 3 - Three images with middle one taller
   {
     id: 6,
-    imageUrl: studentSuccess,
+    imageUrl: "/gallery/selected/IMG_1181.JPG",
     altText: "Student Achievement Celebration",
     span: "col-span-1 row-span-1",
   },
   {
     id: 7,
-    imageUrl: classroom2,
+    imageUrl: "/gallery/selected/IMG_1190.JPG",
     altText: "Collaborative Team Projects",
     span: "col-span-1 row-span-1",
     height: "row-span-1 h-[400px]", // Taller middle image
   },
   {
     id: 8,
-    imageUrl: classroom1,
+    imageUrl: "/gallery/selected/IMG_E0146.JPG",
     altText: "Final Gallery Image",
     span: "col-span-1 row-span-1",
   },
@@ -80,7 +73,7 @@ const Gallery = () => {
               className="flex items-end align-bottom"
             >
               <img
-                src={classroom1}
+                src="/gallery/selected/IMG_E0242.JPG"
                 alt="MUSTARD Gallery"
                 className="rounded-[20px] h-[321px] w-[349px] object-cover"
               />
@@ -197,7 +190,7 @@ const Gallery = () => {
                 className="w-[349px] h-[321px] overflow-hidden rounded-[20px] group cursor-pointer"
               >
                 <motion.img
-                  src={classroom1}
+                  src="/gallery/selected/IMG_E0599.JPG"
                   alt="Gallery Image 1"
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.05, filter: "brightness(0.9)" }}
@@ -212,7 +205,7 @@ const Gallery = () => {
                 className="w-[349px] h-[321px] overflow-hidden rounded-[20px] group cursor-pointer"
               >
                 <motion.img
-                  src={mathToAi}
+                  src="/gallery/selected/IMG-20250729-WA0004.jpg"
                   alt="Gallery Image 2"
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.05, filter: "brightness(0.9)" }}
@@ -227,7 +220,7 @@ const Gallery = () => {
                 className="w-[349px] h-[321px] overflow-hidden rounded-[20px] group cursor-pointer"
               >
                 <motion.img
-                  src={gallery1}
+                  src="/gallery/selected/IMG-20250729-WA0019.jpg"
                   alt="Gallery Image 3"
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.05, filter: "brightness(0.9)" }}
@@ -246,7 +239,7 @@ const Gallery = () => {
                 className="w-[428px] h-[321px] overflow-hidden rounded-[20px] group cursor-pointer"
               >
                 <motion.img
-                  src={gallery2}
+                  src="/gallery/selected/WhatsApp Image 2026-01-02 at 20.46.13.jpeg"
                   alt="Gallery Image 4"
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.05, filter: "brightness(0.9)" }}
@@ -261,7 +254,7 @@ const Gallery = () => {
                 className="w-[634px] h-[321px] overflow-hidden rounded-[20px] group cursor-pointer"
               >
                 <motion.img
-                  src={gallery3}
+                  src="/gallery/selected/WhatsApp Image 2026-01-02 at 20.46.17.jpeg"
                   alt="Gallery Image 5"
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.05, filter: "brightness(0.9)" }}
