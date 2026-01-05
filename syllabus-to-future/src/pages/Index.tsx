@@ -935,6 +935,7 @@ const Index = () => {
                     <h3
                       className="text-4xl md:text-5xl font-normal leading-tight text-black mb-14"
                       style={{
+                        fontFamily: "'Haffer', sans-serif",
                         fontWeight: 400,
                         fontSize: "72px",
                         lineHeight: "121%",
@@ -1036,6 +1037,7 @@ const Index = () => {
                     <h3
                       className="text-4xl md:text-5xl font-normal leading-tight text-black"
                       style={{
+                        fontFamily: "'Haffer', sans-serif",
                         fontWeight: 400,
                         fontSize: "72px",
                         lineHeight: "121%",
@@ -1095,6 +1097,8 @@ const Index = () => {
                     <h3
                       className="text-4xl md:text-5xl font-normal leading-tight text-black"
                       style={{
+                        
+                        fontFamily: "'Haffer', sans-serif",
                         fontWeight: 400,
                         fontSize: "72px",
                         lineHeight: "121%",
