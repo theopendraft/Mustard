@@ -85,7 +85,6 @@ const About = () => {
             <h2
               className="text-6xl md:text-7xl font-normal mb-12 text-black"
               style={{
-                
                 fontFamily: "'Haffer', sans-serif",
                 fontWeight: 400,
                 fontSize: "96px",
@@ -104,7 +103,7 @@ const About = () => {
                 lineHeight: "120%",
                 letterSpacing: "-0.03em",
               }}
-            > 
+            >
               A future where every student leaves school
               <br />
               not just with a report card,
@@ -133,7 +132,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="text-6xl md:text-7xl font-normal mb-14 text-center text-black"
             style={{
-                fontFamily: "'Haffer', sans-serif",
+              fontFamily: "'Haffer', sans-serif",
               fontWeight: 400,
               fontSize: "96px",
               lineHeight: "100%",
@@ -143,7 +142,6 @@ const About = () => {
             Our Core Values
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-
             {/* Green Card - Third to enter */}
             <motion.div
               initial={{ opacity: 0, y: 100 }}
@@ -153,7 +151,7 @@ const About = () => {
               className="w-full"
             >
               <Card
-                className="p-0 h-[400px] md:h-[436px] w-[332px rounded-[10px] overflow-hidden w-full border-0"
+                className="p-0 h-[27rem] rounded-[10px] overflow-hidden w-full border-0"
                 style={{ backgroundColor: "#37e2b4" }}
               >
                 <motion.div
@@ -163,7 +161,7 @@ const About = () => {
                 >
                   <h3
                     className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
-                    style={{  
+                    style={{
                       fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
                       fontSize: "48px",
@@ -175,10 +173,9 @@ const About = () => {
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#FAF4EC] px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px] "
+                      className="bg-[#FAF4EC] px-4 md:px-5 py-4 md:py-5 h-[13.5rem] flex flex-col items-end justify-end mx-[12px] mb-[17px] "
                       style={{
-                        clipPath:
-                          "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
+                        clipPath: "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "2rem",
                         borderRadius: "10px",
                       }}
@@ -186,14 +183,13 @@ const About = () => {
                       <p
                         className="opacity-90 text-black text-sm md:text-base"
                         style={{
-                              
-                              fontFamily: "Inter",
-                              fontWeight: 400,
-                              fontSize: "20px",
-                              lineHeight: "120%",
-                              letterSpacing: "-0.03em",
-                              textAlign: "right",
-                            }}
+                          fontFamily: "Inter",
+                          fontWeight: 400,
+                          fontSize: "20px",
+                          lineHeight: "120%",
+                          letterSpacing: "-0.03em",
+                          textAlign: "right",
+                        }}
                       >
                         Every lesson must answer "Why does this matter?"
                       </p>
@@ -202,8 +198,6 @@ const About = () => {
                 </motion.div>
               </Card>
             </motion.div>
-
-
 
             {/* Purple Card - Second to enter */}
             <motion.div
@@ -214,7 +208,7 @@ const About = () => {
               className="w-full"
             >
               <Card
-                className="p-0 h-[400px] md:h-[436px] w-[332px rounded-[10px] overflow-hidden w-full border-0"
+                className="p-0 h-[27rem] rounded-[10px] overflow-hidden w-full border-0"
                 style={{ backgroundColor: "#7371FC" }}
               >
                 <motion.div
@@ -225,7 +219,6 @@ const About = () => {
                   <h3
                     className="text-3xl md:text-4xl font-normal leading-tight px-4 md:px-[25px] pt-4 md:pt-[25px] pb-6 md:pb-8 mb-6 md:mb-10"
                     style={{
-                      
                       fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
                       fontSize: "48px",
@@ -237,10 +230,9 @@ const About = () => {
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#FAF4EC] px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
+                      className="bg-[#FAF4EC] px-4 md:px-5 py-4 md:py-5 h-[13.5rem] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
                       style={{
-                        clipPath:
-                          "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
+                        clipPath: "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "2rem",
                         borderRadius: "10px",
                       }}
@@ -248,18 +240,17 @@ const About = () => {
                       <p
                         className="opacity-90 text-sm md:text-base"
                         style={{
-                              
-                              fontFamily: "Inter",
-                              fontWeight: 400,
-                              fontSize: "20px",
-                              lineHeight: "120%",
-                              letterSpacing: "-0.03em",
-                              textAlign: "right",
-                            }}
+                          fontFamily: "Inter",
+                          fontWeight: 400,
+                          fontSize: "20px",
+                          lineHeight: "120%",
+                          letterSpacing: "-0.03em",
+                          textAlign: "right",
+                        }}
                       >
-                        Technology is not a 
+                        Technology is not a
                         <br />
-                        separate subject; it is the 
+                        separate subject; it is the
                         <br />
                         application of all subjects.
                       </p>
@@ -268,8 +259,8 @@ const About = () => {
                 </motion.div>
               </Card>
             </motion.div>
-            
-                        {/* Yellow Card - First to enter */}
+
+            {/* Yellow Card - First to enter */}
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -278,7 +269,7 @@ const About = () => {
               className="w-full"
             >
               <Card
-                className="p-0 h-[400px] md:h-[436px] w-[332px rounded-[10px] overflow-hidden border-0"
+                className="p-0 h-[27rem] rounded-[10px] overflow-hidden w-full border-0"
                 style={{ backgroundColor: "#ffbf1f" }}
               >
                 <motion.div
@@ -300,10 +291,9 @@ const About = () => {
                   </h3>
                   <div className="mt-auto">
                     <div
-                      className="bg-[#FAF4EC] px-4 md:px-5 py-4 md:py-5 h-[180px] md:h-[216px] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
+                      className="bg-[#FAF4EC] px-4 md:px-5 py-4 md:py-5 h-[13.5rem] flex flex-col items-end justify-end mx-[12px] mb-[17px]"
                       style={{
-                        clipPath:
-                          "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
+                        clipPath: "polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)",
                         paddingTop: "2rem",
                         borderRadius: "10px",
                       }}
@@ -311,27 +301,25 @@ const About = () => {
                       <p
                         className="opacity-90 text-sm md:text-base"
                         style={{
-                              
-                              fontFamily: "Inter",
-                              fontWeight: 400,
-                              fontSize: "20px",
-                              lineHeight: "120%",
-                              letterSpacing: "-0.03em",
-                              textAlign: "right",
-                            }}
+                          fontFamily: "Inter",
+                          fontWeight: 400,
+                          fontSize: "20px",
+                          lineHeight: "120%",
+                          letterSpacing: "-0.03em",
+                          textAlign: "right",
+                        }}
                       >
-                         Students should feel 
-                         <br />
-                         capable, not intimidated,
-                         <br />
-                         by complex tech.
+                        Students should feel
+                        <br />
+                        capable, not intimidated,
+                        <br />
+                        by complex tech.
                       </p>
                     </div>
                   </div>
                 </motion.div>
               </Card>
             </motion.div>
-            
           </div>
         </div>
       </section>
@@ -340,15 +328,16 @@ const About = () => {
         /* Schools We Serve Section */
         <section className="py-32 px-5">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-normal mb-20 text-center text-black fontfamily-['Haffer',sans-serif]"
-            style={{  
-                      fontFamily: "'Haffer', sans-serif",
-                      fontWeight: 400,
-                      fontSize: "96px",
-                      lineHeight: "100%",
-                      letterSpacing: "-0.03em",
-                    }}>
-            
+            <h2
+              className="text-6xl md:text-7xl font-normal mb-20 text-center text-black fontfamily-['Haffer',sans-serif]"
+              style={{
+                fontFamily: "'Haffer', sans-serif",
+                fontWeight: 400,
+                fontSize: "96px",
+                lineHeight: "100%",
+                letterSpacing: "-0.03em",
+              }}
+            >
               Schools We Serve
             </h2>
 
@@ -358,24 +347,28 @@ const About = () => {
                   key={index}
                   className="p-8 bg-transparent rounded-3xl border border-[#EAE4D8] shadow-sm"
                 >
-                  <h3 className="text-xl font-normal mb-2 text-black leading-tight"
-                  style={{  
+                  <h3
+                    className="text-xl font-normal mb-2 text-black leading-tight"
+                    style={{
                       fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
                       fontSize: "24px",
                       lineHeight: "100%",
                       letterSpacing: "-0.03em",
-                    }}>
+                    }}
+                  >
                     {school.name}
                   </h3>
-                  <p className="text-lg italic text-gray-700 "
-                  style={{  
+                  <p
+                    className="text-lg italic text-gray-700 "
+                    style={{
                       fontFamily: "'Haffer', sans-serif",
                       fontWeight: 400,
                       fontSize: "20px",
                       lineHeight: "100%",
                       letterSpacing: "-0.03em",
-                    }}>
+                    }}
+                  >
                     {school.location}
                   </p>
                 </div>

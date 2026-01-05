@@ -116,15 +116,13 @@ const Gallery = () => {
                   letterSpacing: "-0.03em",
                 }}
               >
-                These aren't just tutors; they are 
+                These aren't just tutors; they are
                 <br />
-                experts in their field. We
-                bring deep 
+                experts in their field. We bring deep
                 <br />
-                industry knowledge to the 
+                industry knowledge to the
                 <br />
-                whiteboard, answering the
-                'Why' 
+                whiteboard, answering the 'Why'
                 <br />
                 behind every equation
               </p>
