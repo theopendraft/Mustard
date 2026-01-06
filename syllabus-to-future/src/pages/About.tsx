@@ -12,7 +12,6 @@ const About = () => {
   const schools = [
     { name: "Joseph Vidya Kshatra", location: "Poonamallee" },
     { name: "Loyola International Residential School", location: "Palanchur" },
-
     { name: "St. Joseph's Matriculation Higher Secondary School", location: "Poonamallee" },
     { name: "St. Joseph's Residential School", location: "Sriperumbudur" },
     { name: "DMI St. Joseph Global School", location: "Trichy" },
