@@ -10,21 +10,22 @@ const About = () => {
     offset: ["start end", "end start"],
   });
   const schools = [
-    { name: "SBIOA Matric Hr Sec School", location: "Anna Nagar" },
-    { name: "Velammal Matric Hr Sec School", location: "Mogappair" },
-    { name: "St Joseph Matric Hr Sec School", location: "Perambur" },
-    { name: "St Joseph Matric Hr Sec School", location: "Shenoy Nagar" },
-    { name: "Sri Sankara Matric Hr Sec School", location: "Adyar" },
-    {
-      name: "Shri Natesan Vidyasala Matric Hr Sec School",
-      location: "T Nagar",
-    },
-    { name: "St Joseph Matric Hr Sec School", location: "Royapuram" },
-    { name: "St Joseph Matric Hr Sec School", location: "Purasawalkam" },
-    { name: "St Joseph Matric Hr Sec School", location: "Vepery" },
-    { name: "St Joseph Matric Hr Sec School", location: "Kilpauk" },
-    { name: "St Joseph Matric Hr Sec School", location: "Anna Nagar" },
-    { name: "St Joseph Matric Hr Sec School", location: "Egmore" },
+    { name: "Joseph Vidya Kshatra", location: "Poonamallee" },
+    { name: "Loyola International Residential School", location: "Palanchur" },
+
+    { name: "St. Joseph's Matriculation Higher Secondary School", location: "Poonamallee" },
+    { name: "St. Joseph's Residential School", location: "Sriperumbudur" },
+    { name: "DMI St. Joseph Global School", location: "Trichy" },
+    { name: "St. Joseph Global School", location: "Pammal" },
+    { name: "Don Bosco Matriculation Higher Secondary School", location: "Tirunelveli" },
+    { name: "DMI St. Joesph Global School", location: "Karaikkal" },
+    { name: "DMI St. Joseph Global School", location: "Polivakkam" },
+    { name: "St. Joseph International School", location: "Aralvaimozhi" },
+    { name: "St. Mary's Matriculation Higher Secondary School", location: "Perambakkam" },
+    { name: "St. Joseph International School", location: "Rajapalayam" },
+    { name: "St. Mary's Matriculation Higher Secondary School", location: "Pallipat" },
+    { name: "St. Joseph's School", location: "Kodikottai" },
+    { name: "St. Joseph's School", location: "Manavalakurichi" },
   ];
 
   return (
